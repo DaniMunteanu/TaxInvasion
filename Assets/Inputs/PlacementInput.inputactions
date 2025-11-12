@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "name": "PlacementInput",
+    "maps": [
+        {
+            "name": "Placement",
+            "id": "8cccbb9c-b38f-461b-a1bb-776da0618d52",
+            "actions": [],
+            "bindings": []
+        }
+    ],
+    "controlSchemes": []
+}
