@@ -8,7 +8,11 @@ public class PlacePirateButton : MonoBehaviour, IBeginDragHandler, IDragHandler,
     [SerializeField]
     Image pirate;
 
-    public Transform canvasTransform;
+    [SerializeField]
+    PlacementSystem placementSystem;
+    public int pirateID = 0;
+
+    public RectTransform canvasTransform;
     private Image instantiatedPirate;
     private RectTransform rt;
 
@@ -22,14 +26,18 @@ public class PlacePirateButton : MonoBehaviour, IBeginDragHandler, IDragHandler,
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("Dragging");
-        rt.anchoredPosition = Mouse.current.position.ReadValue();
-        Debug.Log(Mouse.current.position.ReadValue());
+        Vector2 newAnchoredPosition;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasTransform, Mouse.current.position.ReadValue(), null, out newAnchoredPosition);
+        rt.anchoredPosition = newAnchoredPosition;
+        Debug.Log("Mouse: " + Mouse.current.position.ReadValue());
+        Debug.Log("Pirate: " + rt.anchoredPosition);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("Drag ended");
         Destroy(instantiatedPirate);
+        placementSystem.TryPlacing(pirateID);
         instantiatedPirate = null;
     }
 

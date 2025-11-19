@@ -12,10 +12,19 @@ public class PlacementSystem : MonoBehaviour
     private Tilemap tilemap;
     [SerializeField]
     private GameObject hexIndicator;
+    [SerializeField]
+    PiratesDatabaseSO piratesDatabase;
+    private Vector3 cellCenterPos;
     /*
     [SerializeField]
     private Grid grid;
     */
+
+    public void TryPlacing(int pirateID)
+    {
+        GameObject instantiatedPirate = Instantiate(piratesDatabase.piratesData[pirateID].Prefab);
+        instantiatedPirate.transform.position = cellCenterPos;
+    }
 
     private void Update()
     {
@@ -31,7 +40,7 @@ public class PlacementSystem : MonoBehaviour
         //Debug.Log(gridPosition);
 
         // Move indicator to cell center
-        Vector3 cellCenterPos = tilemap.GetCellCenterWorld(cellPos);
+        cellCenterPos = tilemap.GetCellCenterWorld(cellPos);
         hexIndicator.transform.position = cellCenterPos;
 
         hexIndicator.SetActive(true);
