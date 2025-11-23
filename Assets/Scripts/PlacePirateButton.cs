@@ -36,9 +36,9 @@ public class PlacePirateButton : MonoBehaviour, IBeginDragHandler, IDragHandler,
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("Drag ended");
-        Destroy(instantiatedPirate);
+        DestroyImmediate(instantiatedPirate.gameObject);
         placementSystem.TryPlacing(pirateID);
-        instantiatedPirate = null;
+        //instantiatedPirate = null;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
