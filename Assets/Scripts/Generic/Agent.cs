@@ -1,19 +1,16 @@
-using System;
 using UnityEngine;
 
-public class CutlassPirate : Pirate
+public class Agent : Character
 {
-    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected void Start()
     {
         base.Start();
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         base.Update();
     }
-
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class KatanaAgent : MonoBehaviour
+public class KatanaAgent : Agent
 {
     [SerializeField]
     Transform goldTarget;
@@ -9,11 +9,15 @@ public class KatanaAgent : MonoBehaviour
     Transform currentTarget;
     
     NavMeshAgent agent;
+    [SerializeField]
+    float moveSpeed;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        base.Start();
+
         currentTarget = goldTarget;
 
         agent = GetComponent<NavMeshAgent>();
@@ -24,7 +28,16 @@ public class KatanaAgent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        base.Update();
+        
         agent.SetDestination(currentTarget.position);
+
+        /*
+        if (Vector2.Distance(transform.position, currentTarget.position) < 0.5)
+            agent.speed = 0;
+        else
+            agent.speed = moveSpeed;
+        */
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -35,6 +48,5 @@ public class KatanaAgent : MonoBehaviour
             currentPirateTarget = collision.gameObject.transform;
             currentTarget = currentPirateTarget;
         }
-
     }
 }
