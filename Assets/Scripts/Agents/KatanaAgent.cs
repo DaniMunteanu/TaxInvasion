@@ -29,13 +29,12 @@ public class KatanaAgent : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(currentPirateTarget == null)
+        if(currentPirateTarget == null && collision.gameObject.tag == "Pirate")
         {   
             Debug.Log("Pirate found!");
             currentPirateTarget = collision.gameObject.transform;
             currentTarget = currentPirateTarget;
         }
-        Debug.Log("Collision with something else!");
 
     }
 }
