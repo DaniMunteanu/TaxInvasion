@@ -3,8 +3,7 @@ using UnityEngine.AI;
 
 public class KatanaAgent : Agent
 {
-    [SerializeField]
-    Transform goldTarget;
+    
     Transform currentPirateTarget = null;
     Transform currentTarget;
     

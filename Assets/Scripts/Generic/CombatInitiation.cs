@@ -19,9 +19,9 @@ public class CombatInitiation : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (targetedEnemy == null && ((collision.gameObject.tag == "Agent" && tag == "Pirate" ) || (collision.gameObject.tag == "Pirate" && tag == "Agent" )))
+        if ((collision.gameObject.layer == 8) && (targetedEnemy == null) && ((collision.gameObject.tag == "Agent" && tag == "Pirate" ) || (collision.gameObject.tag == "Pirate" && tag == "Agent" )))
         {
-            targetedEnemy = collision.gameObject.GetComponent<Character>();
+            targetedEnemy = collision.gameObject.transform.parent.gameObject.GetComponent<Character>();
             characterParent.startAttackingEnemy(targetedEnemy);
         }
     }
