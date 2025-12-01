@@ -230,6 +230,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1938150214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &54710367
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.6982409
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.8548806
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404192684959411064, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_Name
+      value: KatanaAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: goldTarget
+      value: 
+      objectReference: {fileID: 1881636880}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
 --- !u!1 &83744116
 GameObject:
   m_ObjectHideFlags: 0
@@ -6609,67 +6670,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &926759231
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.7181385
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.209219
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5404192684959411064, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_Name
-      value: KatanaAgent
-      objectReference: {fileID: 0}
-    - target: {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: goldTarget
-      value: 
-      objectReference: {fileID: 1881636880}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
 --- !u!1 &983087098
 GameObject:
   m_ObjectHideFlags: 0
@@ -7179,6 +7179,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1938150214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1647905553
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.7004399
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.059651
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404192684959411064, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: m_Name
+      value: KatanaAgent (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: goldTarget
+      value: 
+      objectReference: {fileID: 1881636880}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
 --- !u!1 &1655933539
 GameObject:
   m_ObjectHideFlags: 0
@@ -13597,67 +13658,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1938150214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1926245103
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.6875
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5404192684959411064, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: m_Name
-      value: KatanaAgent (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
-      propertyPath: goldTarget
-      value: 
-      objectReference: {fileID: 1881636880}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
 --- !u!1 &1938150213
 GameObject:
   m_ObjectHideFlags: 0
@@ -13945,5 +13945,5 @@ SceneRoots:
   - {fileID: 1760433924}
   - {fileID: 1511463833}
   - {fileID: 1655933540}
-  - {fileID: 926759231}
-  - {fileID: 1926245103}
+  - {fileID: 54710367}
+  - {fileID: 1647905553}
