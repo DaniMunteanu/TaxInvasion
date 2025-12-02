@@ -156,6 +156,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: PirateUpgradeLifesteal_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5970854c9bda3284f83dd1079e43de3e
+      internalID: -1545119182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -174,6 +196,7 @@ TextureImporter:
     nameFileIdTable:
       PirateUpgradeLifesteal_0: 8941386012791469481
       PirateUpgradeLifesteal_1: 172840458
+      PirateUpgradeLifesteal_2: -1545119182
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

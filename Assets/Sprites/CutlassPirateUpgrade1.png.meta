@@ -156,6 +156,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: CutlassPirateUpgrade1_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079a075f872eb7147a79707dbfa2b013
+      internalID: -740655048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -174,6 +196,7 @@ TextureImporter:
     nameFileIdTable:
       CutlassPirateUpgrade1_0: -1884486532621503976
       CutlassPirateUpgrade1_1: 821508721
+      CutlassPirateUpgrade1_2: -740655048
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

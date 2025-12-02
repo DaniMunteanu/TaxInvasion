@@ -156,6 +156,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: PirateUpgradeHealth_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa9c7ba706d3554db2577f3234d9fd9
+      internalID: -1497418990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -174,6 +196,7 @@ TextureImporter:
     nameFileIdTable:
       PirateUpgradeHealth_0: -2631946764904584683
       PirateUpgradeHealth_1: -1080369933
+      PirateUpgradeHealth_2: -1497418990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
