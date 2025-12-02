@@ -52,5 +52,8 @@ TagManager:
   - name: Pirates
     uniqueID: 466883779
     locked: 0
+  - name: UI
+    uniqueID: 624010265
+    locked: 0
   m_RenderingLayers:
   - Default
