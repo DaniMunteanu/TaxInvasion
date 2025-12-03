@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 
@@ -15,6 +16,7 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField]
     PiratesDatabaseSO piratesDatabase;
     private Vector3Int cellPos;
+    private Vector3Int pirateSelector;
     private Vector3 cellCenterPos;
     private Dictionary<Vector3Int, Pirate> placedPirates = new Dictionary<Vector3Int,Pirate>();
 
@@ -102,25 +104,23 @@ public class PlacementSystem : MonoBehaviour
         // Get mouse position in world coordinates
         Vector3 worldPos = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         worldPos.z = 0f;
-        //Vector3 mousePosition = Mouse.current.position.ReadValue();
+
+        Vector3 pirateOffsetPos = worldPos + new Vector3(0f, -18f * 0.03125f, 0f);
 
         // Convert world position to tile cell position
         cellPos = tilemap.WorldToCell(worldPos);
-
-        //Vector3Int gridPosition = grid.WorldToCell(mousePosition);
-        //Debug.Log(gridPosition);
+        pirateSelector = tilemap.WorldToCell(pirateOffsetPos);
 
         // Move indicator to cell center
         cellCenterPos = tilemap.GetCellCenterWorld(cellPos);
         hexIndicator.transform.position = cellCenterPos;
-
-        // Indicator active if cellPos is one of the permited tiles
-        
         
 
-        //hexIndicator.transform.position = grid.CellToWorld(gridPosition);
-
-        //Debug.Log(grid.CellToWorld(gridPosition));
-        //hexIndicator.transform.position = new Vector3(0.0f, 0.0f, 0.0f);
+        if (Mouse.current.leftButton.wasPressedThisFrame && placedPirates.ContainsKey(pirateSelector))
+        {
+            if (placedPirates[pirateSelector] != null)
+                Debug.Log("Placed pirate pressed" + pirateSelector);
+        }
     }
+
 }

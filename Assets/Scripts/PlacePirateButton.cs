@@ -32,6 +32,7 @@ public class PlacePirateButton : MonoBehaviour, IBeginDragHandler, IDragHandler,
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        placementSystem.CheckCurrentIndicatorPosition();
         DestroyImmediate(instantiatedPirate.gameObject);
         placementSystem.TryPlacing(pirateID);
     }
