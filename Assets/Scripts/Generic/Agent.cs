@@ -6,13 +6,13 @@ public class Agent : Character
     [SerializeField]
     public Transform goldTarget;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    protected void Start()
+    new protected void Start()
     {
         base.Start();
     }
 
     // Update is called once per frame
-    protected void Update()
+    new protected void Update()
     {
         base.Update();
     }

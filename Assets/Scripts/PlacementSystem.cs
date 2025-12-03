@@ -14,16 +14,87 @@ public class PlacementSystem : MonoBehaviour
     private GameObject hexIndicator;
     [SerializeField]
     PiratesDatabaseSO piratesDatabase;
+    private Vector3Int cellPos;
     private Vector3 cellCenterPos;
-    /*
-    [SerializeField]
-    private Grid grid;
-    */
+    private Dictionary<Vector3Int, Pirate> placedPirates = new Dictionary<Vector3Int,Pirate>();
+
+    private void Awake()
+    {
+        hexIndicator.SetActive(false);
+        InitializePlacedPiratesData();
+    }
+
+    private void InitializePlacedPiratesData()
+    {
+        placedPirates.Add(new Vector3Int(8,-4,0),null);
+        placedPirates.Add(new Vector3Int(7,-4,0),null);
+        placedPirates.Add(new Vector3Int(6,-4,0),null);
+        placedPirates.Add(new Vector3Int(5,-4,0),null);
+
+        placedPirates.Add(new Vector3Int(7,-3,0),null);
+        placedPirates.Add(new Vector3Int(6,-3,0),null);
+        placedPirates.Add(new Vector3Int(5,-3,0),null);
+        placedPirates.Add(new Vector3Int(4,-3,0),null);
+        
+        placedPirates.Add(new Vector3Int(8,-2,0),null);
+        placedPirates.Add(new Vector3Int(7,-2,0),null);
+        placedPirates.Add(new Vector3Int(6,-2,0),null);
+        placedPirates.Add(new Vector3Int(5,-2,0),null);
+        placedPirates.Add(new Vector3Int(4,-2,0),null);
+
+        placedPirates.Add(new Vector3Int(5,-1,0),null);
+        placedPirates.Add(new Vector3Int(4,-1,0),null);
+        placedPirates.Add(new Vector3Int(3,-1,0),null);
+
+        placedPirates.Add(new Vector3Int(5,0,0),null);
+        placedPirates.Add(new Vector3Int(4,0,0),null);
+        placedPirates.Add(new Vector3Int(3,0,0),null);
+
+        placedPirates.Add(new Vector3Int(5,1,0),null);
+        placedPirates.Add(new Vector3Int(4,1,0),null);
+        placedPirates.Add(new Vector3Int(3,1,0),null);
+
+        placedPirates.Add(new Vector3Int(8,2,0),null);
+        placedPirates.Add(new Vector3Int(7,2,0),null);
+        placedPirates.Add(new Vector3Int(6,2,0),null);
+        placedPirates.Add(new Vector3Int(5,2,0),null);
+        placedPirates.Add(new Vector3Int(4,2,0),null);
+
+        placedPirates.Add(new Vector3Int(7,3,0),null);
+        placedPirates.Add(new Vector3Int(6,3,0),null);
+        placedPirates.Add(new Vector3Int(5,3,0),null);
+        placedPirates.Add(new Vector3Int(4,3,0),null);
+
+        placedPirates.Add(new Vector3Int(8,4,0),null);
+        placedPirates.Add(new Vector3Int(7,4,0),null);
+        placedPirates.Add(new Vector3Int(6,4,0),null);
+        placedPirates.Add(new Vector3Int(5,4,0),null);
+
+    }
 
     public void TryPlacing(int pirateID)
     {
-        GameObject instantiatedPirate = Instantiate(piratesDatabase.piratesData[pirateID].Prefab);
-        instantiatedPirate.transform.position = cellCenterPos;
+        if (hexIndicator.activeSelf)
+        {
+            Pirate instantiatedPirate = Instantiate(piratesDatabase.piratesData[pirateID].Prefab.GetComponent<Pirate>());
+            instantiatedPirate.transform.position = cellCenterPos;
+            placedPirates[cellPos] = instantiatedPirate;
+
+            hexIndicator.SetActive(false);
+        }
+    }
+
+    public void CheckCurrentIndicatorPosition()
+    {
+        if (placedPirates.ContainsKey(cellPos))
+        {
+            if (placedPirates[cellPos] == null)
+            {
+                hexIndicator.SetActive(true);
+                return;
+            }
+        }
+        hexIndicator.SetActive(false);
     }
 
     private void Update()
@@ -34,7 +105,7 @@ public class PlacementSystem : MonoBehaviour
         //Vector3 mousePosition = Mouse.current.position.ReadValue();
 
         // Convert world position to tile cell position
-        Vector3Int cellPos = tilemap.WorldToCell(worldPos);
+        cellPos = tilemap.WorldToCell(worldPos);
 
         //Vector3Int gridPosition = grid.WorldToCell(mousePosition);
         //Debug.Log(gridPosition);
@@ -43,7 +114,9 @@ public class PlacementSystem : MonoBehaviour
         cellCenterPos = tilemap.GetCellCenterWorld(cellPos);
         hexIndicator.transform.position = cellCenterPos;
 
-        hexIndicator.SetActive(true);
+        // Indicator active if cellPos is one of the permited tiles
+        
+        
 
         //hexIndicator.transform.position = grid.CellToWorld(gridPosition);
 

@@ -14,6 +14,15 @@ public class UpgradePage : MonoBehaviour
     [SerializeField]
     Button upgrade2Button;
 
+    [SerializeField]
+    Image healthPath;
+    [SerializeField]
+    Image damagePath;
+    [SerializeField]
+    Image upgrade1Path;
+    [SerializeField]
+    Image upgrade2Path;
+
     private bool lifestealPicked = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,6 +43,22 @@ public class UpgradePage : MonoBehaviour
         upgrade2Button.onClick.AddListener(OnUpgrade2ButtonPressed);
     }
 
+    void HighlightPath(Image path)
+    {
+        foreach (Transform segment in path.transform)
+        {
+            RawImage currentSegment = segment.GetComponent<RawImage>();
+            currentSegment.GetComponent<RawImage>().color = new Color(0,0,0,1);
+            //Invoke("HighlightPathSegment",2);
+        }
+    }
+
+    void HighlightPathSegment()
+    {
+        //currentSegment.color = new Color(255,255,255,1);
+        //currentSegment.GetComponent<RawImage>().color = new Color(0,0,0,1);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -49,6 +74,8 @@ public class UpgradePage : MonoBehaviour
         ss.disabledSprite = healthButton.spriteState.highlightedSprite;
         healthButton.spriteState = ss;
         healthButton.interactable = false;
+
+        HighlightPath(healthPath);
     }
 
     void OnDamageButtonPressed()
@@ -60,6 +87,8 @@ public class UpgradePage : MonoBehaviour
         ss.disabledSprite = damageButton.spriteState.highlightedSprite;
         damageButton.spriteState = ss;
         damageButton.interactable = false;
+
+        HighlightPath(damagePath);
     }
 
     void OnLifestealButtonPressed()
@@ -72,6 +101,9 @@ public class UpgradePage : MonoBehaviour
         ss.disabledSprite = lifestealButton.spriteState.highlightedSprite;
         lifestealButton.spriteState = ss;
         lifestealButton.interactable = false;
+
+        HighlightPath(upgrade1Path);
+        HighlightPath(upgrade2Path);
     }
 
     void OnUpgrade1ButtonPressed()
