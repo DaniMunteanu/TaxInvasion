@@ -123,11 +123,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 240
-        width: 36
-        height: 40
+        y: 252
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -144,12 +144,12 @@ TextureImporter:
       name: CutlassPirate_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 240
-        width: 36
-        height: 40
+        x: 38
+        y: 252
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -166,12 +166,12 @@ TextureImporter:
       name: CutlassPirate_2
       rect:
         serializedVersion: 2
-        x: 72
-        y: 240
-        width: 36
-        height: 40
+        x: 76
+        y: 252
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -189,11 +189,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 36
-        height: 40
+        y: 210
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: CutlassPirate_4
       rect:
         serializedVersion: 2
-        x: 36
-        y: 200
-        width: 36
-        height: 40
+        x: 38
+        y: 210
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,12 +232,12 @@ TextureImporter:
       name: CutlassPirate_5
       rect:
         serializedVersion: 2
-        x: 72
-        y: 200
-        width: 36
-        height: 40
+        x: 76
+        y: 210
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -255,11 +255,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
-        width: 36
-        height: 40
+        y: 168
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -276,12 +276,12 @@ TextureImporter:
       name: CutlassPirate_7
       rect:
         serializedVersion: 2
-        x: 36
-        y: 160
-        width: 36
-        height: 40
+        x: 38
+        y: 168
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -298,12 +298,12 @@ TextureImporter:
       name: CutlassPirate_8
       rect:
         serializedVersion: 2
-        x: 72
-        y: 160
-        width: 36
-        height: 40
+        x: 76
+        y: 168
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -321,11 +321,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 120
-        width: 36
-        height: 40
+        y: 126
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -342,12 +342,12 @@ TextureImporter:
       name: CutlassPirate_10
       rect:
         serializedVersion: 2
-        x: 36
-        y: 120
-        width: 36
-        height: 40
+        x: 38
+        y: 126
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -364,12 +364,12 @@ TextureImporter:
       name: CutlassPirate_11
       rect:
         serializedVersion: 2
-        x: 72
-        y: 120
-        width: 36
-        height: 40
+        x: 76
+        y: 126
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -387,11 +387,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
-        width: 36
-        height: 40
+        y: 84
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -408,12 +408,12 @@ TextureImporter:
       name: CutlassPirate_13
       rect:
         serializedVersion: 2
-        x: 36
-        y: 80
-        width: 36
-        height: 40
+        x: 38
+        y: 84
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -430,12 +430,12 @@ TextureImporter:
       name: CutlassPirate_14
       rect:
         serializedVersion: 2
-        x: 72
-        y: 80
-        width: 36
-        height: 40
+        x: 76
+        y: 84
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -453,11 +453,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 40
-        width: 36
-        height: 40
+        y: 42
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -474,12 +474,12 @@ TextureImporter:
       name: CutlassPirate_16
       rect:
         serializedVersion: 2
-        x: 36
-        y: 40
-        width: 36
-        height: 40
+        x: 38
+        y: 42
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -496,12 +496,12 @@ TextureImporter:
       name: CutlassPirate_17
       rect:
         serializedVersion: 2
-        x: 72
-        y: 40
-        width: 36
-        height: 40
+        x: 76
+        y: 42
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -520,10 +520,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 36
-        height: 40
+        width: 38
+        height: 42
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.14285715}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -550,7 +550,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":36.0,"y":40.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":38.0,"y":42.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.1428571492433548},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":1,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       CutlassPirate_0: -5267237560762734477
       CutlassPirate_1: 4976741347288460112

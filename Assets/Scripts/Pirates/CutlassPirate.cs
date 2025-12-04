@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class CutlassPirate : Pirate
 {
-    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected new void Start()
     {
@@ -14,6 +13,16 @@ public class CutlassPirate : Pirate
     protected new void Update()
     {
         base.Update();
+    }
+
+    public new void Highlight()
+    {
+        base.Highlight();
+    }
+
+    public new void UnHighlight()
+    {
+        base.UnHighlight();
     }
 
 }

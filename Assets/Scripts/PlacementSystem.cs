@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -19,6 +20,7 @@ public class PlacementSystem : MonoBehaviour
     private Vector3Int pirateSelector;
     private Vector3 cellCenterPos;
     private Dictionary<Vector3Int, Pirate> placedPirates = new Dictionary<Vector3Int,Pirate>();
+    private Pirate lastSelectedPirate;
 
     private void Awake()
     {
@@ -81,8 +83,14 @@ public class PlacementSystem : MonoBehaviour
             Pirate instantiatedPirate = Instantiate(piratesDatabase.piratesData[pirateID].Prefab.GetComponent<Pirate>());
             instantiatedPirate.transform.position = cellCenterPos;
             placedPirates[cellPos] = instantiatedPirate;
-
+        
             hexIndicator.SetActive(false);
+
+            if (lastSelectedPirate != null)
+                lastSelectedPirate.UnHighlight();
+
+            placedPirates[cellPos].Highlight();
+            lastSelectedPirate = placedPirates[cellPos];
         }
     }
 
@@ -104,8 +112,9 @@ public class PlacementSystem : MonoBehaviour
         // Get mouse position in world coordinates
         Vector3 worldPos = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         worldPos.z = 0f;
-
-        Vector3 pirateOffsetPos = worldPos + new Vector3(0f, -18f * 0.03125f, 0f);
+        
+        //                                                   -18?
+        Vector3 pirateOffsetPos = worldPos + new Vector3(0f, -24f * 0.03125f, 0f);
 
         // Convert world position to tile cell position
         cellPos = tilemap.WorldToCell(worldPos);
@@ -116,10 +125,25 @@ public class PlacementSystem : MonoBehaviour
         hexIndicator.transform.position = cellCenterPos;
         
 
-        if (Mouse.current.leftButton.wasPressedThisFrame && placedPirates.ContainsKey(pirateSelector))
+        if (Mouse.current.leftButton.wasPressedThisFrame) 
         {
-            if (placedPirates[pirateSelector] != null)
-                Debug.Log("Placed pirate pressed" + pirateSelector);
+            if (placedPirates.ContainsKey(pirateSelector))
+            {
+                if (placedPirates[pirateSelector] != null)
+                {
+                    placedPirates[pirateSelector].Highlight();
+
+                    if (lastSelectedPirate != null && lastSelectedPirate != placedPirates[pirateSelector])
+                        lastSelectedPirate.UnHighlight();
+
+                    lastSelectedPirate = placedPirates[pirateSelector];
+                }
+            }
+            else
+            {
+                if (lastSelectedPirate != null)
+                    lastSelectedPirate.UnHighlight();
+            }
         }
     }
 
