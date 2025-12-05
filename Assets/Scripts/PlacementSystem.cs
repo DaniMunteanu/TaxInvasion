@@ -16,6 +16,8 @@ public class PlacementSystem : MonoBehaviour
     private GameObject hexIndicator;
     [SerializeField]
     PiratesDatabaseSO piratesDatabase;
+    [SerializeField]
+    MainUI mainUI;
     private Vector3Int cellPos;
     private Vector3Int pirateSelector;
     private Vector3 cellCenterPos;
@@ -81,6 +83,7 @@ public class PlacementSystem : MonoBehaviour
         if (hexIndicator.activeSelf)
         {
             Pirate instantiatedPirate = Instantiate(piratesDatabase.piratesData[pirateID].Prefab.GetComponent<Pirate>());
+            mainUI.AddUpgradePage(cellPos, instantiatedPirate);
             instantiatedPirate.transform.position = cellCenterPos;
             placedPirates[cellPos] = instantiatedPirate;
         
@@ -89,7 +92,6 @@ public class PlacementSystem : MonoBehaviour
             if (lastSelectedPirate != null)
                 lastSelectedPirate.UnHighlight();
 
-            placedPirates[cellPos].Highlight();
             lastSelectedPirate = placedPirates[cellPos];
         }
     }
@@ -132,6 +134,7 @@ public class PlacementSystem : MonoBehaviour
                 if (placedPirates[pirateSelector] != null)
                 {
                     placedPirates[pirateSelector].Highlight();
+                    mainUI.ShowUpgradePage(pirateSelector);
 
                     if (lastSelectedPirate != null && lastSelectedPirate != placedPirates[pirateSelector])
                         lastSelectedPirate.UnHighlight();

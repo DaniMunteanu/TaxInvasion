@@ -4,13 +4,15 @@ public class Pirate : Character
 {
     [SerializeField]
     Shader highlightShader;
-
+    [SerializeField]
+    public UpgradePage upgradePagePrefab;
+    public UpgradePage upgradePageInstance;
     private Material defaultMaterial;
     private SpriteRenderer spriteRenderer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected new void Start()
     {
-        
+        Highlight();
     }
 
     protected void Awake()
