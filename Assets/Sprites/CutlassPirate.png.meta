@@ -536,6 +536,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_19
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0095780b2c4d51040bc63e58f8785c99
+      internalID: 1511883501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_20
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19e2d111c63b72459d9532af35a44a6
+      internalID: 961202504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -563,7 +607,9 @@ TextureImporter:
       CutlassPirate_16: 1717871733
       CutlassPirate_17: 1675907430
       CutlassPirate_18: 19887934
+      CutlassPirate_19: 1511883501
       CutlassPirate_2: 1959788216206200671
+      CutlassPirate_20: 961202504
       CutlassPirate_3: -446372401
       CutlassPirate_4: 1030610537
       CutlassPirate_5: -640079477
