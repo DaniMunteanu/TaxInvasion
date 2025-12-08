@@ -123,7 +123,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 252
+        y: 294
         width: 38
         height: 42
       alignment: 9
@@ -145,7 +145,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 252
+        y: 294
         width: 38
         height: 42
       alignment: 9
@@ -167,7 +167,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
-        y: 252
+        y: 294
         width: 38
         height: 42
       alignment: 9
@@ -189,7 +189,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 210
+        y: 252
         width: 38
         height: 42
       alignment: 9
@@ -211,7 +211,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 210
+        y: 252
         width: 38
         height: 42
       alignment: 9
@@ -233,7 +233,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
-        y: 210
+        y: 252
         width: 38
         height: 42
       alignment: 9
@@ -255,7 +255,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 168
+        y: 210
         width: 38
         height: 42
       alignment: 9
@@ -277,7 +277,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 168
+        y: 210
         width: 38
         height: 42
       alignment: 9
@@ -299,7 +299,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
-        y: 168
+        y: 210
         width: 38
         height: 42
       alignment: 9
@@ -321,7 +321,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 126
+        y: 168
         width: 38
         height: 42
       alignment: 9
@@ -343,7 +343,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 126
+        y: 168
         width: 38
         height: 42
       alignment: 9
@@ -365,7 +365,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
-        y: 126
+        y: 168
         width: 38
         height: 42
       alignment: 9
@@ -387,7 +387,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 84
+        y: 126
         width: 38
         height: 42
       alignment: 9
@@ -409,7 +409,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 84
+        y: 126
         width: 38
         height: 42
       alignment: 9
@@ -431,7 +431,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
-        y: 84
+        y: 126
         width: 38
         height: 42
       alignment: 9
@@ -453,7 +453,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 42
+        y: 84
         width: 38
         height: 42
       alignment: 9
@@ -475,7 +475,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 42
+        y: 84
         width: 38
         height: 42
       alignment: 9
@@ -497,7 +497,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
-        y: 42
+        y: 84
         width: 38
         height: 42
       alignment: 9
@@ -519,7 +519,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 42
         width: 38
         height: 42
       alignment: 9
@@ -541,7 +541,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 0
+        y: 42
         width: 38
         height: 42
       alignment: 9
@@ -563,7 +563,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
-        y: 0
+        y: 42
         width: 38
         height: 42
       alignment: 9
@@ -576,6 +576,72 @@ TextureImporter:
       bones: []
       spriteID: b19e2d111c63b72459d9532af35a44a6
       internalID: 961202504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780f8f882a7cc52429cc6c5197590106
+      internalID: 2066371250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_22
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3057563f4dc447e459971b263eaf30d6
+      internalID: -1847183303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_23
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e21768e9bfc7a842a26719e8aac1c8a
+      internalID: -338109842
       vertices: []
       indices: 
       edges: []
@@ -594,7 +660,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":38.0,"y":42.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.1428571492433548},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":1,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":38.0,"y":42.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.1428571492433548},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":1,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: True
     nameFileIdTable:
       CutlassPirate_0: -5267237560762734477
       CutlassPirate_1: 4976741347288460112
@@ -610,6 +678,9 @@ TextureImporter:
       CutlassPirate_19: 1511883501
       CutlassPirate_2: 1959788216206200671
       CutlassPirate_20: 961202504
+      CutlassPirate_21: 2066371250
+      CutlassPirate_22: -1847183303
+      CutlassPirate_23: -338109842
       CutlassPirate_3: -446372401
       CutlassPirate_4: 1030610537
       CutlassPirate_5: -640079477

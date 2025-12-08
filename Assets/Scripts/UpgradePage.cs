@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UpgradePage : MonoBehaviour
@@ -22,6 +23,8 @@ public class UpgradePage : MonoBehaviour
     Image upgrade1Path;
     [SerializeField]
     Image upgrade2Path;
+
+    public UnityEvent upgrade1Bought;
 
     private bool lifestealPicked = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -114,6 +117,8 @@ public class UpgradePage : MonoBehaviour
         ss.disabledSprite = upgrade1Button.spriteState.highlightedSprite;
         upgrade1Button.spriteState = ss;
         upgrade1Button.interactable = false;
+
+        upgrade1Bought.Invoke();
     }
 
     void OnUpgrade2ButtonPressed()

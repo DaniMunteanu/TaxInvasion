@@ -13,6 +13,12 @@ public class Pirate : Character
     protected new void Start()
     {
         Highlight();
+        upgradePageInstance.upgrade1Bought.AddListener(OnUpgrade1Bought);
+    }
+
+    protected void OnUpgrade1Bought()
+    {
+        animator.SetBool("usesAttack1", true);
     }
 
     protected void Awake()

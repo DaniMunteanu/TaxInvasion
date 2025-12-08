@@ -3,7 +3,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     [SerializeField]
-    Animator animator;
+    public Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected void Start()
     {
