@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Agent
   - Pirate
+  - Treasure
   layers:
   - Default
   - TransparentFX

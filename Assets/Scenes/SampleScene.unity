@@ -241,11 +241,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6982409
+      value: -4.375
       objectReference: {fileID: 0}
     - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8548806
+      value: -5.40625
       objectReference: {fileID: 0}
     - target: {fileID: 1183713725710992098, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -285,6 +285,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
       propertyPath: goldTarget
+      value: 
+      objectReference: {fileID: 1881636880}
+    - target: {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: treasureTarget
       value: 
       objectReference: {fileID: 1881636880}
     m_RemovedComponents: []
@@ -7116,6 +7120,10 @@ PrefabInstance:
       propertyPath: goldTarget
       value: 
       objectReference: {fileID: 1881636880}
+    - target: {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: treasureTarget
+      value: 
+      objectReference: {fileID: 1881636880}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13245,9 +13253,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1881636880}
   - component: {fileID: 1881636879}
-  m_Layer: 6
-  m_Name: Gold
-  m_TagString: Untagged
+  - component: {fileID: 1881636881}
+  - component: {fileID: 1881636882}
+  m_Layer: 7
+  m_Name: TreasurePile
+  m_TagString: Treasure
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13325,6 +13335,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1503297575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1881636881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881636878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b3aeeab8a97f742ada37f17d4f7965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TreasurePile
+  mainUI: {fileID: 1076252052}
+--- !u!70 &1881636882
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881636878}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.34, y: 0.34}
+  m_Direction: 1
 --- !u!1 &1919695054
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,20 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Agent : Character
 {
     public int laneIndex;
+    public Transform treasureTarget;
+
+    protected Transform currentPirateTarget = null;
+    protected Transform currentTarget;
+    
+    protected NavMeshAgent agent;
     [SerializeField]
-    public Transform goldTarget;
+    protected float moveSpeed;
+    [SerializeField]
+    protected float treasureDamage;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     new protected void Start()
     {

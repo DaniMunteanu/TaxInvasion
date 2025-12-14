@@ -200,8 +200,9 @@ MonoBehaviour:
   health: {fileID: 4361514062161260344}
   damage: 2
   laneIndex: 0
-  goldTarget: {fileID: 0}
+  treasureTarget: {fileID: 0}
   moveSpeed: 1
+  treasureDamage: 2
 --- !u!195 &7561427123318010180
 NavMeshAgent:
   m_ObjectHideFlags: 0

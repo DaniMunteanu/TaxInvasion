@@ -7,8 +7,8 @@ public class HealthBar : MonoBehaviour
     Image primaryFill;
     [SerializeField]
     Image secondaryFill;
-    [SerializeField]
-    Health health;
+    
+    public Health health;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

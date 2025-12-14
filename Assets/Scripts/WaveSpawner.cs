@@ -51,7 +51,7 @@ public class WaveSpawner : MonoBehaviour
         {
             Agent newAgent = Instantiate(lane.agents.Dequeue());
             newAgent.transform.position = lanePositions[lane.laneIndex];
-            newAgent.goldTarget = goldTarget;
+            newAgent.treasureTarget = goldTarget;
             newAgent.laneIndex = lane.laneIndex;
             agentsSpawned[lane.laneIndex]++;
             return true;

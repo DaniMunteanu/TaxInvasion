@@ -3,21 +3,12 @@ using UnityEngine.AI;
 
 public class KatanaAgent : Agent
 {
-    
-    Transform currentPirateTarget = null;
-    Transform currentTarget;
-    
-    NavMeshAgent agent;
-    [SerializeField]
-    float moveSpeed;
-    
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     new void Start()
     {
         base.Start();
 
-        currentTarget = goldTarget;
+        currentTarget = treasureTarget;
 
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -46,6 +37,17 @@ public class KatanaAgent : Agent
             Debug.Log("Pirate found!");
             currentPirateTarget = collision.gameObject.transform;
             currentTarget = currentPirateTarget;
+        }
+        else
+        {
+            if(collision.gameObject.tag == "Treasure")
+            {
+                Debug.Log("Treasure found!");
+                agent.speed = 0;
+                collision.gameObject.GetComponent<TreasurePile>().mainUI.treasureHealth.TakeDamage(treasureDamage);
+                
+                //Destroy(this.gameObject); //instead we play teleportation animation
+            }
         }
     }
 }

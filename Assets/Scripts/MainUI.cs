@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class MainUI : MonoBehaviour
 {
+    public HealthBar treasureHealthbar;
+    public Health treasureHealth;
+
     private Dictionary<Vector3Int,UpgradePage> upgradePages = new Dictionary<Vector3Int, UpgradePage>();
     private UpgradePage lastShownUpgradePage;
 
