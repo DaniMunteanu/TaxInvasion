@@ -132,6 +132,9 @@ MonoBehaviour:
   damagePath: {fileID: 7556237639086984520}
   upgrade1Path: {fileID: 2440138118933842007}
   upgrade2Path: {fileID: 6534583835574650573}
+  upgrade1Bought:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &330582954319911955
 GameObject:
   m_ObjectHideFlags: 0
