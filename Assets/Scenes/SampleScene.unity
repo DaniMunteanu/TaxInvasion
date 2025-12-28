@@ -6604,6 +6604,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1938150214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &860695625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860695626}
+  m_Layer: 0
+  m_Name: EconomySystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &860695626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860695625}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.49627, y: -2.56191, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &983087098
 GameObject:
   m_ObjectHideFlags: 0
@@ -13383,7 +13414,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.34, y: 0.34}
+  m_Size: {x: 1.24, y: 0.82}
   m_Direction: 1
 --- !u!1 &1919695054
 GameObject:
@@ -13667,6 +13698,10 @@ PrefabInstance:
       propertyPath: waveSpawner
       value: 
       objectReference: {fileID: 1655933541}
+    - target: {fileID: 3539739480199595155, guid: 08a7628e82fe8704a8af4d3d94c39ceb, type: 3}
+      propertyPath: waveSpawner
+      value: 
+      objectReference: {fileID: 1655933541}
     - target: {fileID: 3574405589214541070, guid: 08a7628e82fe8704a8af4d3d94c39ceb, type: 3}
       propertyPath: placementSystem
       value: 
@@ -13675,6 +13710,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5400588221788990002, guid: 08a7628e82fe8704a8af4d3d94c39ceb, type: 3}
+      propertyPath: placementSystem
+      value: 
+      objectReference: {fileID: 2101864218}
     - target: {fileID: 8394075487538678734, guid: 08a7628e82fe8704a8af4d3d94c39ceb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -13702,3 +13741,4 @@ SceneRoots:
   - {fileID: 1655933540}
   - {fileID: 54710367}
   - {fileID: 1647905553}
+  - {fileID: 860695626}

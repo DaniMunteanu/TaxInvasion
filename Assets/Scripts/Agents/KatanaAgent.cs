@@ -37,13 +37,14 @@ public class KatanaAgent : Agent
             Debug.Log("Pirate found!");
             currentPirateTarget = collision.gameObject.transform;
             currentTarget = currentPirateTarget;
+            agent.stoppingDistance = 1;
         }
         else
         {
             if(collision.gameObject.tag == "Treasure")
             {
                 Debug.Log("Treasure found!");
-                agent.speed = 0;
+                agent.isStopped = true;
                 collision.gameObject.GetComponent<TreasurePile>().mainUI.treasureHealth.TakeDamage(treasureDamage);
                 
                 //Destroy(this.gameObject); //instead we play teleportation animation
