@@ -9,7 +9,7 @@ public class WaveSpawner : MonoBehaviour
     GameObject laneMarkers;
 
     [SerializeField]
-    Transform goldTarget;
+    TreasurePile treasureTarget;
 
     private int NUMBER_OF_LANES = 17;
     private int MAX_ROUNDS = 1;
@@ -51,7 +51,7 @@ public class WaveSpawner : MonoBehaviour
         {
             Agent newAgent = Instantiate(lane.agents.Dequeue());
             newAgent.transform.position = lanePositions[lane.laneIndex];
-            newAgent.treasureTarget = goldTarget;
+            newAgent.treasurePile = treasureTarget;
             newAgent.laneIndex = lane.laneIndex;
             agentsSpawned[lane.laneIndex]++;
             return true;

@@ -22,7 +22,7 @@ public class CombatInitiation : MonoBehaviour
         if ((collision.gameObject.layer == 8) && (targetedEnemy == null) && ((collision.gameObject.tag == "Agent" && tag == "Pirate" ) || (collision.gameObject.tag == "Pirate" && tag == "Agent" )))
         {
             targetedEnemy = collision.gameObject.transform.parent.gameObject.GetComponent<Character>();
-            characterParent.startAttackingEnemy(targetedEnemy);
+            characterParent.StartAttackingEnemy(targetedEnemy);
         }
     }
 }

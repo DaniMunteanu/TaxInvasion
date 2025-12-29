@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -9,10 +11,12 @@ public class Character : MonoBehaviour
     [SerializeField]
     float damage;
     Character currentEnemy;
+    public UnityEvent characterDead;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected void Start()
     {
         animator.SetBool("isAttacking", false);
+        health.healthDepleted.AddListener(OnHealthDepleted);
     }
 
     // Update is called once per frame
@@ -21,11 +25,12 @@ public class Character : MonoBehaviour
         
     }
 
-    public void startAttackingEnemy(Character enemy)
+    public void StartAttackingEnemy(Character enemy)
     {
         animator.SetBool("isAttacking", true);
             
         currentEnemy = enemy;
+        currentEnemy.characterDead.AddListener(OnEnemyDead);
 
         Vector2 direction = transform.position - currentEnemy.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 180.0f;
@@ -38,7 +43,7 @@ public class Character : MonoBehaviour
                 animator.SetTrigger("attackUpRight");
                 break;
             case 1:
-                animator.SetTrigger("attackUpCenter");
+                animator.SetTrigger("attackUp");
                 break;
             case 2:
                 animator.SetTrigger("attackUpLeft");
@@ -47,7 +52,7 @@ public class Character : MonoBehaviour
                 animator.SetTrigger("attackDownLeft");
                 break;
             case 4:
-                animator.SetTrigger("attackDownCenter");
+                animator.SetTrigger("attackDown");
                 break;
             case 5:
                 animator.SetTrigger("attackDownRight");
@@ -57,8 +62,27 @@ public class Character : MonoBehaviour
         Debug.Log("Pirate found enemy!");
     }
 
+    public void CharacterTakeDamage(float damage)
+    {
+        health.TakeDamage(damage);
+        if (animator != null)
+            animator.SetTrigger("isHurt");
+    }
+
     public void DealDamageToEnemy()
     {
-        currentEnemy.health.TakeDamage(damage);
+        currentEnemy.CharacterTakeDamage(damage);
+    }
+
+    public void OnHealthDepleted()
+    {
+        characterDead.Invoke();
+        Destroy(this.gameObject);
+    }
+
+    public void OnEnemyDead()
+    {
+        Debug.Log("EnemyDead");
+        animator.SetBool("isAttacking", false);
     }
 }

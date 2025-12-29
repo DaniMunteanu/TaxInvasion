@@ -8,7 +8,8 @@ public class KatanaAgent : Agent
     {
         base.Start();
 
-        currentTarget = treasureTarget;
+        currentTarget = treasurePile.transform;
+        SetOrientationForCurrentTarget();
 
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -30,6 +31,38 @@ public class KatanaAgent : Agent
         */
     }
 
+    void SetOrientationForCurrentTarget()
+    {
+        animator.SetBool("isAttacking", false);
+
+        Vector2 direction = transform.position - currentTarget.transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 180.0f;
+
+        print((int) (angle/60.0));
+
+        switch ( (int) (angle/60.0))
+        {
+            case 0:
+                animator.SetTrigger("walkUpRight");
+                break;
+            case 1:
+                animator.SetTrigger("walkUp");
+                break;
+            case 2:
+                animator.SetTrigger("walkUpLeft");
+                break;
+            case 3:
+                animator.SetTrigger("walkDownLeft");
+                break;
+            case 4:
+                animator.SetTrigger("walkDown");
+                break;
+            case 5:
+                animator.SetTrigger("walkDownRight");
+                break;            
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(currentPirateTarget == null && collision.gameObject.tag == "Pirate")
@@ -37,6 +70,7 @@ public class KatanaAgent : Agent
             Debug.Log("Pirate found!");
             currentPirateTarget = collision.gameObject.transform;
             currentTarget = currentPirateTarget;
+            SetOrientationForCurrentTarget();
             agent.stoppingDistance = 1;
         }
         else
@@ -45,10 +79,14 @@ public class KatanaAgent : Agent
             {
                 Debug.Log("Treasure found!");
                 agent.isStopped = true;
-                collision.gameObject.GetComponent<TreasurePile>().mainUI.treasureHealth.TakeDamage(treasureDamage);
-                
-                //Destroy(this.gameObject); //instead we play teleportation animation
+                animator.SetTrigger("stealTreasure");
             }
         }
+    }
+
+    void StealTreasure()
+    {
+        treasurePile.mainUI.treasureHealth.TakeDamage(treasureDamage);
+        Destroy(this.gameObject);
     }
 }

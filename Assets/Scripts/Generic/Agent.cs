@@ -4,8 +4,7 @@ using UnityEngine.AI;
 public class Agent : Character
 {
     public int laneIndex;
-    public Transform treasureTarget;
-
+    public TreasurePile treasurePile;
     protected Transform currentPirateTarget = null;
     protected Transform currentTarget;
     

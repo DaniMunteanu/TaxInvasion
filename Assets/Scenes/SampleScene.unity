@@ -288,6 +288,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1881636880}
     - target: {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: treasurePile
+      value: 
+      objectReference: {fileID: 1881636881}
+    - target: {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
       propertyPath: treasureTarget
       value: 
       objectReference: {fileID: 1881636880}
@@ -7152,6 +7156,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1881636880}
     - target: {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+      propertyPath: treasurePile
+      value: 
+      objectReference: {fileID: 1881636881}
+    - target: {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
       propertyPath: treasureTarget
       value: 
       objectReference: {fileID: 1881636880}
@@ -7205,7 +7213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveSpawner
   laneMarkers: {fileID: 1938150213}
-  goldTarget: {fileID: 1881636880}
+  treasureTarget: {fileID: 1881636881}
 --- !u!1 &1716021281
 GameObject:
   m_ObjectHideFlags: 0
