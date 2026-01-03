@@ -11,6 +11,11 @@ public class PlacePirateButton : MonoBehaviour, IBeginDragHandler, IDragHandler,
     [SerializeField]
     PlacementSystem placementSystem;
     public int pirateID = 0;
+    public int piratePrice;
+
+    [SerializeField]
+    EconomySystem economySystem;
+    private Button buttonComponent;
 
     public RectTransform canvasTransform;
     private Image instantiatedPirate;
@@ -18,12 +23,18 @@ public class PlacePirateButton : MonoBehaviour, IBeginDragHandler, IDragHandler,
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if(buttonComponent.interactable == false)
+            return;
+        
         instantiatedPirate = Instantiate(pirate, canvasTransform);
         rt = instantiatedPirate.GetComponent<RectTransform>();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if(buttonComponent.interactable == false)
+            return;
+        
         placementSystem.CheckCurrentIndicatorPosition();
         Vector2 newAnchoredPosition;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasTransform, Mouse.current.position.ReadValue(), null, out newAnchoredPosition);
@@ -32,15 +43,29 @@ public class PlacePirateButton : MonoBehaviour, IBeginDragHandler, IDragHandler,
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if(buttonComponent.interactable == false)
+            return;
+        
         placementSystem.CheckCurrentIndicatorPosition();
         DestroyImmediate(instantiatedPirate.gameObject);
         placementSystem.TryPlacing(pirateID);
     }
 
+    void CheckCredits(int creditsDiff)
+    {
+        if(economySystem.currentCredits < piratePrice)
+            buttonComponent.interactable = false;
+        else
+            buttonComponent.interactable = true;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        buttonComponent = gameObject.GetComponent<Button>();
+        CheckCredits(0);
+        economySystem.creditsEarned.AddListener(CheckCredits);
+        economySystem.creditsSpent.AddListener(CheckCredits);
     }
 
     // Update is called once per frame

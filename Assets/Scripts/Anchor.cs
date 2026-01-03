@@ -1,18 +1,17 @@
 using UnityEngine;
-using UnityEngine.AI;
 
-public class KatanaAgent : Agent
+public class Anchor : MonoBehaviour
 {
+    public Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    new void Start()
+    void Start()
     {
-        base.Start();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    new void Update()
+    void Update()
     {
-        base.Update();
+        
     }
-
 }

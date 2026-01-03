@@ -198,11 +198,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KatanaAgent
   animator: {fileID: 7897438607876908147}
   health: {fileID: 4361514062161260344}
-  damage: 2
+  damage: 1
+  characterDead:
+    m_PersistentCalls:
+      m_Calls: []
+  creditsEarnedOnDeath: 50
   laneIndex: 0
-  treasureTarget: {fileID: 0}
+  treasurePile: {fileID: 0}
   moveSpeed: 1
-  treasureDamage: 2
+  treasureDamage: 1
 --- !u!195 &7561427123318010180
 NavMeshAgent:
   m_ObjectHideFlags: 0

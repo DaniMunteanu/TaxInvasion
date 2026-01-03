@@ -11,6 +11,9 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField]
     TreasurePile treasureTarget;
 
+    [SerializeField]
+    EconomySystem economySystem;
+
     private int NUMBER_OF_LANES = 17;
     private int MAX_ROUNDS = 1;
     private int roundCount = 1;
@@ -53,6 +56,9 @@ public class WaveSpawner : MonoBehaviour
             newAgent.transform.position = lanePositions[lane.laneIndex];
             newAgent.treasurePile = treasureTarget;
             newAgent.laneIndex = lane.laneIndex;
+
+            economySystem.RegisterCharacterDeath(newAgent);
+
             agentsSpawned[lane.laneIndex]++;
             return true;
         }

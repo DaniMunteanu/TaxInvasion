@@ -11,7 +11,8 @@ public class Character : MonoBehaviour
     [SerializeField]
     float damage;
     Character currentEnemy;
-    public UnityEvent characterDead;
+    public UnityEvent<int> characterDead;
+    public int creditsEarnedOnDeath;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected void Start()
     {
@@ -35,8 +36,6 @@ public class Character : MonoBehaviour
         Vector2 direction = transform.position - currentEnemy.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 180.0f;
 
-        print((int) (angle/60.0));
-
         switch ( (int) (angle/60.0))
         {
             case 0:
@@ -58,8 +57,6 @@ public class Character : MonoBehaviour
                 animator.SetTrigger("attackDownRight");
                 break;            
         }
-
-        Debug.Log("Pirate found enemy!");
     }
 
     public void CharacterTakeDamage(float damage)
@@ -76,13 +73,13 @@ public class Character : MonoBehaviour
 
     public void OnHealthDepleted()
     {
-        characterDead.Invoke();
+        characterDead.Invoke(creditsEarnedOnDeath);
+        Debug.Log("Character dead!");
         Destroy(this.gameObject);
     }
 
-    public void OnEnemyDead()
+    public void OnEnemyDead(int creditsEarnedOnDeath)
     {
-        Debug.Log("EnemyDead");
         animator.SetBool("isAttacking", false);
     }
 }

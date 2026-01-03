@@ -17,12 +17,34 @@ public class CombatInitiation : MonoBehaviour
         
     }
 
+    void OnCharacterDead(int creditsEarnedOnDeath)
+    {
+        targetedEnemy = null;
+    }
+
+    void CheckIfEnemy(Collider2D collision)
+    {
+        if ((collision.gameObject.layer == 8) && ((collision.gameObject.tag == "Agent" && tag == "Pirate" ) || (collision.gameObject.tag == "Pirate" && tag == "Agent" )))
+            {
+                targetedEnemy = collision.gameObject.transform.parent.gameObject.GetComponent<Character>();
+                targetedEnemy.characterDead.AddListener(OnCharacterDead);
+                characterParent.StartAttackingEnemy(targetedEnemy);
+            }
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.gameObject.layer == 8) && (targetedEnemy == null) && ((collision.gameObject.tag == "Agent" && tag == "Pirate" ) || (collision.gameObject.tag == "Pirate" && tag == "Agent" )))
+        if (targetedEnemy == null)
         {
-            targetedEnemy = collision.gameObject.transform.parent.gameObject.GetComponent<Character>();
-            characterParent.StartAttackingEnemy(targetedEnemy);
+            CheckIfEnemy(collision);
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (targetedEnemy == null)
+        {
+            CheckIfEnemy(collision);
         }
     }
 }

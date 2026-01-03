@@ -15,14 +15,4 @@ public class CutlassPirate : Pirate
         base.Update();
     }
 
-    public new void Highlight()
-    {
-        base.Highlight();
-    }
-
-    public new void UnHighlight()
-    {
-        base.UnHighlight();
-    }
-
 }

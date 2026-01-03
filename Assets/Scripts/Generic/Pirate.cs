@@ -7,11 +7,14 @@ public class Pirate : Character
     [SerializeField]
     public UpgradePage upgradePagePrefab;
     public UpgradePage upgradePageInstance;
+    public int price;
     private Material defaultMaterial;
     private SpriteRenderer spriteRenderer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected new void Start()
     {
+        base.Start();
+        creditsEarnedOnDeath = price/2;
         Highlight();
         upgradePageInstance.upgrade1Bought.AddListener(OnUpgrade1Bought);
     }

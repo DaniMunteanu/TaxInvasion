@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class UpgradePage : MonoBehaviour
 {
+    public EconomySystem economySystem;
+
     [SerializeField]
     Button healthButton;
     [SerializeField]
@@ -23,6 +25,11 @@ public class UpgradePage : MonoBehaviour
     Image upgrade1Path;
     [SerializeField]
     Image upgrade2Path;
+
+    [SerializeField]
+    Anchor anchor1;
+    [SerializeField]
+    Anchor anchor2;
 
     public UnityEvent upgrade1Bought;
 
@@ -113,6 +120,9 @@ public class UpgradePage : MonoBehaviour
     void OnUpgrade1ButtonPressed()
     {
         upgrade2Button.interactable = false;
+
+        anchor2.animator.SetBool("anchorDown", true);
+
         SpriteState ss = new SpriteState();
         ss.disabledSprite = upgrade1Button.spriteState.highlightedSprite;
         upgrade1Button.spriteState = ss;
@@ -124,6 +134,9 @@ public class UpgradePage : MonoBehaviour
     void OnUpgrade2ButtonPressed()
     {
         upgrade1Button.interactable = false;
+
+        anchor1.animator.SetBool("anchorDown", true);
+
         SpriteState ss = new SpriteState();
         ss.disabledSprite = upgrade2Button.spriteState.highlightedSprite;
         upgrade2Button.spriteState = ss;

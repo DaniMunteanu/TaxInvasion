@@ -18,6 +18,8 @@ public class PlacementSystem : MonoBehaviour
     PiratesDatabaseSO piratesDatabase;
     [SerializeField]
     MainUI mainUI;
+    [SerializeField]
+    EconomySystem economySystem;
     private Vector3Int cellPos;
     private Vector3Int pirateSelector;
     private Vector3 cellCenterPos;
@@ -86,6 +88,8 @@ public class PlacementSystem : MonoBehaviour
             mainUI.AddUpgradePage(cellPos, instantiatedPirate);
             instantiatedPirate.transform.position = cellCenterPos;
             placedPirates[cellPos] = instantiatedPirate;
+
+            economySystem.RegisterCharacterDeath(instantiatedPirate);
         
             hexIndicator.SetActive(false);
 

@@ -1,10 +1,18 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MainUI : MonoBehaviour
 {
+    [SerializeField]
+    EconomySystem economySystem;
+
     public HealthBar treasureHealthbar;
     public Health treasureHealth;
+    public TMP_Text treasureHPText;
+    public TMP_Text creditsSpentText;
+    public TMP_Text creditsTotalText;
+    public TMP_Text roundText;
 
     private Dictionary<Vector3Int,UpgradePage> upgradePages = new Dictionary<Vector3Int, UpgradePage>();
     private UpgradePage lastShownUpgradePage;
@@ -13,6 +21,19 @@ public class MainUI : MonoBehaviour
     void Start()
     {
         InitializeUpgradePagesData();
+        OnTreasureHealthChanged();
+        treasureHealth.healthChanged.AddListener(OnTreasureHealthChanged);
+        economySystem.creditsEarned.AddListener(UpdateTotalCreditsText);
+    }
+
+    void OnTreasureHealthChanged()
+    {
+        treasureHPText.text = treasureHealth.currentHitpoints + "/" + treasureHealth.maxHitpoints;
+    }
+
+    void UpdateTotalCreditsText(int creditsDiff)
+    {
+        creditsTotalText.text = economySystem.currentCredits.ToString();
     }
 
     private void InitializeUpgradePagesData()
@@ -66,6 +87,7 @@ public class MainUI : MonoBehaviour
     public void AddUpgradePage(Vector3Int pirateGridPosition, Pirate pirate)
     {
         upgradePages[pirateGridPosition] = Instantiate(pirate.upgradePagePrefab);
+        upgradePages[pirateGridPosition].economySystem = economySystem;
         upgradePages[pirateGridPosition].transform.SetParent(gameObject.transform, true);
         pirate.upgradePageInstance = upgradePages[pirateGridPosition];
 

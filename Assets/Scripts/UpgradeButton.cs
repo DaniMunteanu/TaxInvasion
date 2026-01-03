@@ -1,18 +1,20 @@
 using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.UI;
 
-public class KatanaAgent : Agent
+public class UpgradeButton : MonoBehaviour
 {
+    public int upgradePrice;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    new void Start()
+    void Start()
     {
-        base.Start();
+        
     }
 
     // Update is called once per frame
-    new void Update()
+    void Update()
     {
-        base.Update();
+        
     }
 
 }

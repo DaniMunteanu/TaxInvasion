@@ -1,18 +1,40 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TreasurePile : MonoBehaviour
 {
-    float currentTreasureHitpoints;
-    public MainUI mainUI;
+    public Health treasureHealth;
+
+    [SerializeField]
+    List<Sprite> sprites;
+    
+    private SpriteRenderer spriteRenderer;
+
+    private float subdivision = 1;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentTreasureHitpoints = mainUI.treasureHealth.currentHitpoints ;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = sprites[5];
+        treasureHealth.healthChanged.AddListener(UpdateSprite);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void UpdateSprite()
+    {
+        if (treasureHealth.currentHitpoints == 0)
+        {
+            spriteRenderer.sprite = sprites[0];
+        }
+        else
+        {
+            spriteRenderer.sprite = sprites[(int) (treasureHealth.currentHitpoints / subdivision)];
+        }
     }
 }
