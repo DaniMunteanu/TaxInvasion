@@ -34,11 +34,25 @@ public class UpgradePage : MonoBehaviour
     public UnityEvent upgrade1Bought;
 
     private bool lifestealPicked = false;
+
+    private int healthUpgradePrice;
+    private int damageUpgradePrice;
+    private int lifestealUpgradePrice;
+    private int upgrade1Price;
+    private int upgrade2Price;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         transform.localScale = new Vector3(1, 1, 1);
         transform.localPosition = new Vector3(0, 0, 0);
+
+        healthUpgradePrice = healthButton.GetComponent<UpgradeButton>().upgradePrice;
+        damageUpgradePrice = damageButton.GetComponent<UpgradeButton>().upgradePrice;
+        lifestealUpgradePrice = lifestealButton.GetComponent<UpgradeButton>().upgradePrice;
+        upgrade1Price = upgrade1Button.GetComponent<UpgradeButton>().upgradePrice;
+        upgrade2Price = upgrade2Button.GetComponent<UpgradeButton>().upgradePrice;
     }
 
     void Awake()
@@ -78,6 +92,11 @@ public class UpgradePage : MonoBehaviour
 
     void OnHealthButtonPressed()
     {
+        if(economySystem.currentCredits < healthUpgradePrice)
+            return;
+
+        economySystem.purchaseMade.Invoke(healthUpgradePrice);
+
         if(lifestealPicked == false)
             lifestealButton.interactable = true;
 
@@ -91,6 +110,11 @@ public class UpgradePage : MonoBehaviour
 
     void OnDamageButtonPressed()
     {
+        if(economySystem.currentCredits < damageUpgradePrice)
+            return;
+        
+        economySystem.purchaseMade.Invoke(damageUpgradePrice);
+
         if(lifestealPicked == false)
             lifestealButton.interactable = true;
             
@@ -104,6 +128,11 @@ public class UpgradePage : MonoBehaviour
 
     void OnLifestealButtonPressed()
     {
+        if(economySystem.currentCredits < lifestealUpgradePrice)
+            return;
+
+        economySystem.purchaseMade.Invoke(lifestealUpgradePrice);
+
         lifestealPicked = true;
 
         upgrade1Button.interactable = true;
@@ -119,9 +148,14 @@ public class UpgradePage : MonoBehaviour
 
     void OnUpgrade1ButtonPressed()
     {
+        if(economySystem.currentCredits < upgrade1Price)
+            return;
+
+        economySystem.purchaseMade.Invoke(upgrade1Price);
+
         upgrade2Button.interactable = false;
 
-        anchor2.animator.SetBool("anchorDown", true);
+        anchor2.animator.SetTrigger("anchorDown");
 
         SpriteState ss = new SpriteState();
         ss.disabledSprite = upgrade1Button.spriteState.highlightedSprite;
@@ -133,9 +167,14 @@ public class UpgradePage : MonoBehaviour
 
     void OnUpgrade2ButtonPressed()
     {
+        if(economySystem.currentCredits < upgrade2Price)
+            return;
+
+        economySystem.purchaseMade.Invoke(upgrade2Price);
+
         upgrade1Button.interactable = false;
 
-        anchor1.animator.SetBool("anchorDown", true);
+        anchor1.animator.SetTrigger("anchorDown");
 
         SpriteState ss = new SpriteState();
         ss.disabledSprite = upgrade2Button.spriteState.highlightedSprite;

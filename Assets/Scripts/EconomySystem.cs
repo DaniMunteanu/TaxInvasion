@@ -7,12 +7,12 @@ public class EconomySystem : MonoBehaviour
 {
     public int currentCredits;
 
-    public UnityEvent<int> creditsSpent;
-    public UnityEvent<int> creditsEarned;
+    public UnityEvent<int> purchaseMade;
+    public UnityEvent creditsModified;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        purchaseMade.AddListener(OnPurchaseMade);
     }
 
     // Update is called once per frame
@@ -29,7 +29,13 @@ public class EconomySystem : MonoBehaviour
     void OnCharacterDead(int creditsEarnedOnDeath)
     {
         currentCredits = Mathf.Clamp(currentCredits + creditsEarnedOnDeath, 0, 999);
-        creditsEarned.Invoke(creditsEarnedOnDeath);
+        creditsModified.Invoke();
+    }
+
+    void OnPurchaseMade(int creditsSpent)
+    {
+        currentCredits = Mathf.Clamp(currentCredits - creditsSpent, 0, 999);
+        creditsModified.Invoke();
     }
     
 }

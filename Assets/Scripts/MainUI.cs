@@ -22,8 +22,9 @@ public class MainUI : MonoBehaviour
     {
         InitializeUpgradePagesData();
         OnTreasureHealthChanged();
+        UpdateTotalCreditsText();
         treasureHealth.healthChanged.AddListener(OnTreasureHealthChanged);
-        economySystem.creditsEarned.AddListener(UpdateTotalCreditsText);
+        economySystem.creditsModified.AddListener(UpdateTotalCreditsText);
     }
 
     void OnTreasureHealthChanged()
@@ -31,7 +32,7 @@ public class MainUI : MonoBehaviour
         treasureHPText.text = treasureHealth.currentHitpoints + "/" + treasureHealth.maxHitpoints;
     }
 
-    void UpdateTotalCreditsText(int creditsDiff)
+    void UpdateTotalCreditsText()
     {
         creditsTotalText.text = economySystem.currentCredits.ToString();
     }

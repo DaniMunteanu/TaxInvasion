@@ -89,6 +89,7 @@ public class PlacementSystem : MonoBehaviour
             instantiatedPirate.transform.position = cellCenterPos;
             placedPirates[cellPos] = instantiatedPirate;
 
+            economySystem.purchaseMade.Invoke(instantiatedPirate.price);
             economySystem.RegisterCharacterDeath(instantiatedPirate);
         
             hexIndicator.SetActive(false);

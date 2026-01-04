@@ -51,7 +51,7 @@ public class PlacePirateButton : MonoBehaviour, IBeginDragHandler, IDragHandler,
         placementSystem.TryPlacing(pirateID);
     }
 
-    void CheckCredits(int creditsDiff)
+    void CheckCredits()
     {
         if(economySystem.currentCredits < piratePrice)
             buttonComponent.interactable = false;
@@ -63,9 +63,8 @@ public class PlacePirateButton : MonoBehaviour, IBeginDragHandler, IDragHandler,
     void Start()
     {
         buttonComponent = gameObject.GetComponent<Button>();
-        CheckCredits(0);
-        economySystem.creditsEarned.AddListener(CheckCredits);
-        economySystem.creditsSpent.AddListener(CheckCredits);
+        CheckCredits();
+        economySystem.creditsModified.AddListener(CheckCredits);
     }
 
     // Update is called once per frame
