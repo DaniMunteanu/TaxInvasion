@@ -5,8 +5,9 @@ public class Pirate : Character
     [SerializeField]
     Shader highlightShader;
     [SerializeField]
-    public UpgradePage upgradePagePrefab;
-    public UpgradePage upgradePageInstance;
+    public PirateProfile pirateProfilePrefab;
+    public PirateProfile pirateProfileInstance;
+    public Vector3Int gridPosition;
     public int price;
     private Material defaultMaterial;
     private SpriteRenderer spriteRenderer;
@@ -14,9 +15,11 @@ public class Pirate : Character
     protected new void Start()
     {
         base.Start();
-        creditsEarnedOnDeath = price/2;
+        creditsDroppedOnDeath = price/2;
         Highlight();
-        upgradePageInstance.upgrade1Bought.AddListener(OnUpgrade1Bought);
+        pirateProfileInstance.upgradePage.upgrade1Bought.AddListener(OnUpgrade1Bought);
+        health.healthDepleted.AddListener(OnPirateDead);
+        pirateProfileInstance.healthBar.health = health;
     }
 
     protected void OnUpgrade1Bought()
@@ -44,6 +47,11 @@ public class Pirate : Character
     public void UnHighlight()
     {
         spriteRenderer.material = defaultMaterial;
+    }
+
+    public void OnPirateDead()
+    {
+        pirateProfileInstance.destroyProfilePage.Invoke(gridPosition);
     }
 
 }

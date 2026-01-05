@@ -197,12 +197,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KatanaAgent
   animator: {fileID: 7897438607876908147}
+  characterStats: {fileID: 11400000, guid: 5821ed3a01f1dde4bbb12db961cf2343, type: 2}
   health: {fileID: 4361514062161260344}
-  damage: 1
+  damage: 5
   characterDead:
     m_PersistentCalls:
       m_Calls: []
-  creditsEarnedOnDeath: 50
+  creditsDroppedOnDeath: 0
   laneIndex: 0
   treasurePile: {fileID: 0}
   moveSpeed: 1
@@ -412,6 +413,10 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 4361514062161260344}
+    - target: {fileID: 4887539085761084755, guid: 0c8ffa275c251ba4c9fadfbb9fb69b37, type: 3}
+      propertyPath: forCharacter
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8308731607796169570, guid: 0c8ffa275c251ba4c9fadfbb9fb69b37, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -306,15 +306,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutlassPirate
   animator: {fileID: 4482056785602377893}
+  characterStats: {fileID: 11400000, guid: 5821ed3a01f1dde4bbb12db961cf2343, type: 2}
   health: {fileID: 3221490636068127929}
   damage: 5
   characterDead:
     m_PersistentCalls:
       m_Calls: []
-  creditsEarnedOnDeath: 0
+  creditsDroppedOnDeath: 0
   highlightShader: {fileID: -6465566751694194690, guid: a089245979a0a8346a1d5b5b8637a57f, type: 3}
-  upgradePagePrefab: {fileID: 8980027108220362222, guid: 2770a797bc6b691429a15fbda1dc94c7, type: 3}
-  upgradePageInstance: {fileID: 0}
+  pirateProfilePrefab: {fileID: 6220336833325657726, guid: b15afc3fcbbb367419f8f28f2dcc6c61, type: 3}
+  pirateProfileInstance: {fileID: 0}
+  gridPosition: {x: 0, y: 0, z: 0}
   price: 90
 --- !u!1001 &5749955623472924226
 PrefabInstance:
@@ -417,6 +419,10 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 3221490636068127929}
+    - target: {fileID: 4887539085761084755, guid: 0c8ffa275c251ba4c9fadfbb9fb69b37, type: 3}
+      propertyPath: forCharacter
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8308731607796169570, guid: 0c8ffa275c251ba4c9fadfbb9fb69b37, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

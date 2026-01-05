@@ -6742,13 +6742,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8ce522631401549a209959dbc94adb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EconomySystem
-  currentCredits: 100
-  creditsSpent:
+  currentCredits: 60
+  purchaseMade:
     m_PersistentCalls:
       m_Calls: []
-  creditsEarned:
+  creditsModified:
     m_PersistentCalls:
       m_Calls: []
+  characterStats: {fileID: 11400000, guid: 5821ed3a01f1dde4bbb12db961cf2343, type: 2}
 --- !u!1 &983087098
 GameObject:
   m_ObjectHideFlags: 0
@@ -13507,6 +13508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b3aeeab8a97f742ada37f17d4f7965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TreasurePile
+  characterStats: {fileID: 11400000, guid: 5821ed3a01f1dde4bbb12db961cf2343, type: 2}
   treasureHealth: {fileID: 766133889}
   sprites:
   - {fileID: 8541810331322148018, guid: 324cdd0856ea65140aac31c256b7ba98, type: 3}
@@ -13831,10 +13833,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1887453369994708488, guid: 08a7628e82fe8704a8af4d3d94c39ceb, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2403033667780645279, guid: 08a7628e82fe8704a8af4d3d94c39ceb, type: 3}
       propertyPath: economySystem
       value: 
       objectReference: {fileID: 860695627}
+    - target: {fileID: 2403033667780645279, guid: 08a7628e82fe8704a8af4d3d94c39ceb, type: 3}
+      propertyPath: characterStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 5821ed3a01f1dde4bbb12db961cf2343, type: 2}
     - target: {fileID: 2403033667780645279, guid: 08a7628e82fe8704a8af4d3d94c39ceb, type: 3}
       propertyPath: treasureHealth
       value: 
@@ -13851,6 +13861,10 @@ PrefabInstance:
       propertyPath: placementSystem
       value: 
       objectReference: {fileID: 2101864218}
+    - target: {fileID: 5042347277755760082, guid: 08a7628e82fe8704a8af4d3d94c39ceb, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5244555631937272097, guid: 08a7628e82fe8704a8af4d3d94c39ceb, type: 3}
       propertyPath: m_Name
       value: MainUI
@@ -13879,6 +13893,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1655933539}
+    - target: {fileID: 9064306931272168712, guid: 08a7628e82fe8704a8af4d3d94c39ceb, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

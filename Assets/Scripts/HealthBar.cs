@@ -9,6 +9,7 @@ public class HealthBar : MonoBehaviour
     Image secondaryFill;
     
     public Health health;
+    public bool forCharacter;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +26,9 @@ public class HealthBar : MonoBehaviour
 
     void InitializeFillColors()
     {
+        if(forCharacter == false)
+            return;
+
         GameObject parentCharacter = this.transform.parent.gameObject;
         if (parentCharacter.tag == "Pirate")
         {

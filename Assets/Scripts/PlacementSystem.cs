@@ -85,9 +85,11 @@ public class PlacementSystem : MonoBehaviour
         if (hexIndicator.activeSelf)
         {
             Pirate instantiatedPirate = Instantiate(piratesDatabase.piratesData[pirateID].Prefab.GetComponent<Pirate>());
-            mainUI.AddUpgradePage(cellPos, instantiatedPirate);
+            mainUI.AddPirateProfile(cellPos, instantiatedPirate);
             instantiatedPirate.transform.position = cellCenterPos;
+            
             placedPirates[cellPos] = instantiatedPirate;
+            instantiatedPirate.gridPosition = cellPos;
 
             economySystem.purchaseMade.Invoke(instantiatedPirate.price);
             economySystem.RegisterCharacterDeath(instantiatedPirate);
@@ -139,7 +141,7 @@ public class PlacementSystem : MonoBehaviour
                 if (placedPirates[pirateSelector] != null)
                 {
                     placedPirates[pirateSelector].Highlight();
-                    mainUI.ShowUpgradePage(pirateSelector);
+                    mainUI.ShowPirateProfile(pirateSelector);
 
                     if (lastSelectedPirate != null && lastSelectedPirate != placedPirates[pirateSelector])
                         lastSelectedPirate.UnHighlight();

@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class PlacePirateButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField]
+    CharacterStatsSO characterStats;
+
+    [SerializeField]
     Image pirate;
 
     [SerializeField]
     PlacementSystem placementSystem;
     public int pirateID = 0;
-    public int piratePrice;
 
     [SerializeField]
     EconomySystem economySystem;
@@ -53,7 +55,7 @@ public class PlacePirateButton : MonoBehaviour, IBeginDragHandler, IDragHandler,
 
     void CheckCredits()
     {
-        if(economySystem.currentCredits < piratePrice)
+        if(economySystem.currentCredits < characterStats.cutlassPirateStats.price)
             buttonComponent.interactable = false;
         else
             buttonComponent.interactable = true;

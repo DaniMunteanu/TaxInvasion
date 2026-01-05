@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class UpgradePage : MonoBehaviour
 {
+    public CharacterStatsSO characterStats;
     public EconomySystem economySystem;
 
     [SerializeField]
@@ -48,11 +49,11 @@ public class UpgradePage : MonoBehaviour
         transform.localScale = new Vector3(1, 1, 1);
         transform.localPosition = new Vector3(0, 0, 0);
 
-        healthUpgradePrice = healthButton.GetComponent<UpgradeButton>().upgradePrice;
-        damageUpgradePrice = damageButton.GetComponent<UpgradeButton>().upgradePrice;
-        lifestealUpgradePrice = lifestealButton.GetComponent<UpgradeButton>().upgradePrice;
-        upgrade1Price = upgrade1Button.GetComponent<UpgradeButton>().upgradePrice;
-        upgrade2Price = upgrade2Button.GetComponent<UpgradeButton>().upgradePrice;
+        healthUpgradePrice = characterStats.cutlassPirateStats.healthUpgradePrice;
+        damageUpgradePrice = characterStats.cutlassPirateStats.damageUpgradePrice;
+        lifestealUpgradePrice = characterStats.cutlassPirateStats.lifestealUpgradePrice;
+        upgrade1Price = characterStats.cutlassPirateStats.spinUpgradePrice;
+        upgrade2Price = characterStats.cutlassPirateStats.captainUpgradePrice;
     }
 
     void Awake()

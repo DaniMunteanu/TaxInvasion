@@ -87,7 +87,7 @@ public class Agent : Character
         }
         else
         {
-            if(collision.gameObject.tag == "Treasure")
+            if(collision.gameObject.tag == "Treasure" && currentTarget == treasurePile.transform)
             {
                 agent.isStopped = true;
                 animator.SetTrigger("stealTreasure");

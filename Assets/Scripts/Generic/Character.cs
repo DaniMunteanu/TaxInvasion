@@ -7,12 +7,13 @@ public class Character : MonoBehaviour
     [SerializeField]
     public Animator animator;
     [SerializeField]
-    Health health;
+    protected CharacterStatsSO characterStats;
+    public Health health;
     [SerializeField]
-    float damage;
+    protected float damage;
     Character currentEnemy;
     public UnityEvent<int> characterDead;
-    public int creditsEarnedOnDeath;
+    public int creditsDroppedOnDeath;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected void Start()
     {
@@ -73,7 +74,7 @@ public class Character : MonoBehaviour
 
     public void OnHealthDepleted()
     {
-        characterDead.Invoke(creditsEarnedOnDeath);
+        characterDead.Invoke(creditsDroppedOnDeath);
         Debug.Log("Character dead!");
         Destroy(this.gameObject);
     }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class MainUI : MonoBehaviour
 {
     [SerializeField]
+    CharacterStatsSO characterStats;
+    [SerializeField]
     EconomySystem economySystem;
 
     public HealthBar treasureHealthbar;
@@ -14,13 +16,13 @@ public class MainUI : MonoBehaviour
     public TMP_Text creditsTotalText;
     public TMP_Text roundText;
 
-    private Dictionary<Vector3Int,UpgradePage> upgradePages = new Dictionary<Vector3Int, UpgradePage>();
-    private UpgradePage lastShownUpgradePage;
+    private Dictionary<Vector3Int,PirateProfile> pirateProfiles = new Dictionary<Vector3Int, PirateProfile>();
+    private PirateProfile lastShownPirateProfile;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        InitializeUpgradePagesData();
+        InitializePirateProfilesData();
         OnTreasureHealthChanged();
         UpdateTotalCreditsText();
         treasureHealth.healthChanged.AddListener(OnTreasureHealthChanged);
@@ -37,78 +39,80 @@ public class MainUI : MonoBehaviour
         creditsTotalText.text = economySystem.currentCredits.ToString();
     }
 
-    private void InitializeUpgradePagesData()
+    private void InitializePirateProfilesData()
     {
-        upgradePages.Add(new Vector3Int(8,-4,0),null);
-        upgradePages.Add(new Vector3Int(7,-4,0),null);
-        upgradePages.Add(new Vector3Int(6,-4,0),null);
-        upgradePages.Add(new Vector3Int(5,-4,0),null);
+        pirateProfiles.Add(new Vector3Int(8,-4,0),null);
+        pirateProfiles.Add(new Vector3Int(7,-4,0),null);
+        pirateProfiles.Add(new Vector3Int(6,-4,0),null);
+        pirateProfiles.Add(new Vector3Int(5,-4,0),null);
 
-        upgradePages.Add(new Vector3Int(7,-3,0),null);
-        upgradePages.Add(new Vector3Int(6,-3,0),null);
-        upgradePages.Add(new Vector3Int(5,-3,0),null);
-        upgradePages.Add(new Vector3Int(4,-3,0),null);
+        pirateProfiles.Add(new Vector3Int(7,-3,0),null);
+        pirateProfiles.Add(new Vector3Int(6,-3,0),null);
+        pirateProfiles.Add(new Vector3Int(5,-3,0),null);
+        pirateProfiles.Add(new Vector3Int(4,-3,0),null);
         
-        upgradePages.Add(new Vector3Int(8,-2,0),null);
-        upgradePages.Add(new Vector3Int(7,-2,0),null);
-        upgradePages.Add(new Vector3Int(6,-2,0),null);
-        upgradePages.Add(new Vector3Int(5,-2,0),null);
-        upgradePages.Add(new Vector3Int(4,-2,0),null);
+        pirateProfiles.Add(new Vector3Int(8,-2,0),null);
+        pirateProfiles.Add(new Vector3Int(7,-2,0),null);
+        pirateProfiles.Add(new Vector3Int(6,-2,0),null);
+        pirateProfiles.Add(new Vector3Int(5,-2,0),null);
+        pirateProfiles.Add(new Vector3Int(4,-2,0),null);
 
-        upgradePages.Add(new Vector3Int(5,-1,0),null);
-        upgradePages.Add(new Vector3Int(4,-1,0),null);
-        upgradePages.Add(new Vector3Int(3,-1,0),null);
+        pirateProfiles.Add(new Vector3Int(5,-1,0),null);
+        pirateProfiles.Add(new Vector3Int(4,-1,0),null);
+        pirateProfiles.Add(new Vector3Int(3,-1,0),null);
 
-        upgradePages.Add(new Vector3Int(5,0,0),null);
-        upgradePages.Add(new Vector3Int(4,0,0),null);
-        upgradePages.Add(new Vector3Int(3,0,0),null);
+        pirateProfiles.Add(new Vector3Int(5,0,0),null);
+        pirateProfiles.Add(new Vector3Int(4,0,0),null);
+        pirateProfiles.Add(new Vector3Int(3,0,0),null);
 
-        upgradePages.Add(new Vector3Int(5,1,0),null);
-        upgradePages.Add(new Vector3Int(4,1,0),null);
-        upgradePages.Add(new Vector3Int(3,1,0),null);
+        pirateProfiles.Add(new Vector3Int(5,1,0),null);
+        pirateProfiles.Add(new Vector3Int(4,1,0),null);
+        pirateProfiles.Add(new Vector3Int(3,1,0),null);
 
-        upgradePages.Add(new Vector3Int(8,2,0),null);
-        upgradePages.Add(new Vector3Int(7,2,0),null);
-        upgradePages.Add(new Vector3Int(6,2,0),null);
-        upgradePages.Add(new Vector3Int(5,2,0),null);
-        upgradePages.Add(new Vector3Int(4,2,0),null);
+        pirateProfiles.Add(new Vector3Int(8,2,0),null);
+        pirateProfiles.Add(new Vector3Int(7,2,0),null);
+        pirateProfiles.Add(new Vector3Int(6,2,0),null);
+        pirateProfiles.Add(new Vector3Int(5,2,0),null);
+        pirateProfiles.Add(new Vector3Int(4,2,0),null);
 
-        upgradePages.Add(new Vector3Int(7,3,0),null);
-        upgradePages.Add(new Vector3Int(6,3,0),null);
-        upgradePages.Add(new Vector3Int(5,3,0),null);
-        upgradePages.Add(new Vector3Int(4,3,0),null);
+        pirateProfiles.Add(new Vector3Int(7,3,0),null);
+        pirateProfiles.Add(new Vector3Int(6,3,0),null);
+        pirateProfiles.Add(new Vector3Int(5,3,0),null);
+        pirateProfiles.Add(new Vector3Int(4,3,0),null);
 
-        upgradePages.Add(new Vector3Int(8,4,0),null);
-        upgradePages.Add(new Vector3Int(7,4,0),null);
-        upgradePages.Add(new Vector3Int(6,4,0),null);
-        upgradePages.Add(new Vector3Int(5,4,0),null);
+        pirateProfiles.Add(new Vector3Int(8,4,0),null);
+        pirateProfiles.Add(new Vector3Int(7,4,0),null);
+        pirateProfiles.Add(new Vector3Int(6,4,0),null);
+        pirateProfiles.Add(new Vector3Int(5,4,0),null);
 
     }
 
-    public void AddUpgradePage(Vector3Int pirateGridPosition, Pirate pirate)
+    public void AddPirateProfile(Vector3Int pirateGridPosition, Pirate pirate)
     {
-        upgradePages[pirateGridPosition] = Instantiate(pirate.upgradePagePrefab);
-        upgradePages[pirateGridPosition].economySystem = economySystem;
-        upgradePages[pirateGridPosition].transform.SetParent(gameObject.transform, true);
-        pirate.upgradePageInstance = upgradePages[pirateGridPosition];
+        pirateProfiles[pirateGridPosition] = Instantiate(pirate.pirateProfilePrefab);
+        pirateProfiles[pirateGridPosition].destroyProfilePage.AddListener(RemovePirateProfile);
+        pirateProfiles[pirateGridPosition].upgradePage.economySystem = economySystem;
+        pirateProfiles[pirateGridPosition].upgradePage.characterStats = characterStats;
+        pirateProfiles[pirateGridPosition].transform.SetParent(gameObject.transform, true);
+        pirate.pirateProfileInstance = pirateProfiles[pirateGridPosition];
 
-        ShowUpgradePage(pirateGridPosition);
+        ShowPirateProfile(pirateGridPosition);
     }
 
     //micunealta pe care o vom folosi mai tarziu  >__<
-    public void RemoveUpgradePage(Vector3Int pirateGridPosition)
+    public void RemovePirateProfile(Vector3Int pirateGridPosition)
     {
-        Destroy(upgradePages[pirateGridPosition]);
-        upgradePages[pirateGridPosition] = null;
+        Destroy(pirateProfiles[pirateGridPosition].gameObject);
+        pirateProfiles[pirateGridPosition] = null;
     }
 
-    public void ShowUpgradePage(Vector3Int pirateGridPosition)
+    public void ShowPirateProfile(Vector3Int pirateGridPosition)
     {
-        if (lastShownUpgradePage != null)
-            lastShownUpgradePage.gameObject.SetActive(false);
+        if (lastShownPirateProfile != null)
+            lastShownPirateProfile.gameObject.SetActive(false);
         
-        upgradePages[pirateGridPosition].gameObject.SetActive(true);
-        lastShownUpgradePage = upgradePages[pirateGridPosition];
+        pirateProfiles[pirateGridPosition].gameObject.SetActive(true);
+        lastShownPirateProfile = pirateProfiles[pirateGridPosition];
     }
     
     // Update is called once per frame

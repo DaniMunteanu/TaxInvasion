@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047454e107771dd4a821275a8db098c5, type: 3}
+  m_Name: CharacterStats
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterStatsSO
+  cutlassPirateStats:
+    maxHealth: 20
+    damage: 5
+    price: 50
+    healthUpgradeBonus: 20
+    healthUpgradePrice: 20
+    damageUpgradeBonus: 5
+    damageUpgradePrice: 20
+    lifestealUpgradeMultiplier: 0.5
+    lifestealUpgradePrice: 30
+    spinUpgradePrice: 50
+    captainPassiveHealAmmount: 0.1
+    captainUpgradePrice: 50
+  katanaAgentStats:
+    maxHealth: 15
+    damage: 5
+    treasureDamage: 2
+    creditsDroppedOnDeath: 10
+  treasureHealth: 10
+  startCredits: 100

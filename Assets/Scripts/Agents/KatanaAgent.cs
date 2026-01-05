@@ -7,6 +7,11 @@ public class KatanaAgent : Agent
     new void Start()
     {
         base.Start();
+        health.maxHitpoints = characterStats.katanaAgentStats.maxHealth;
+        health.currentHitpoints = characterStats.katanaAgentStats.maxHealth;
+        damage = characterStats.katanaAgentStats.damage;
+        treasureDamage = characterStats.katanaAgentStats.treasureDamage;
+        creditsDroppedOnDeath = characterStats.katanaAgentStats.creditsDroppedOnDeath;
     }
 
     // Update is called once per frame

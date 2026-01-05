@@ -9,10 +9,15 @@ public class EconomySystem : MonoBehaviour
 
     public UnityEvent<int> purchaseMade;
     public UnityEvent creditsModified;
+
+    [SerializeField]
+    CharacterStatsSO characterStats;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         purchaseMade.AddListener(OnPurchaseMade);
+        currentCredits = characterStats.startCredits;
+        creditsModified.Invoke();
     }
 
     // Update is called once per frame
