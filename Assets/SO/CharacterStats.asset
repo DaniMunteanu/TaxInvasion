@@ -17,12 +17,12 @@ MonoBehaviour:
     damage: 5
     price: 50
     healthUpgradeBonus: 20
-    healthUpgradePrice: 20
+    healthUpgradePrice: 0
     damageUpgradeBonus: 5
-    damageUpgradePrice: 20
+    damageUpgradePrice: 0
     lifestealUpgradeMultiplier: 0.5
-    lifestealUpgradePrice: 30
-    spinUpgradePrice: 50
+    lifestealUpgradePrice: 0
+    spinUpgradePrice: 0
     captainPassiveHealAmmount: 0.1
     captainUpgradePrice: 50
   katanaAgentStats:

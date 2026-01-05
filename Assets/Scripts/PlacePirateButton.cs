@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -18,6 +19,8 @@ public class PlacePirateButton : MonoBehaviour, IBeginDragHandler, IDragHandler,
     [SerializeField]
     EconomySystem economySystem;
     private Button buttonComponent;
+    [SerializeField]
+    TMP_Text piratePriceText;
 
     public RectTransform canvasTransform;
     private Image instantiatedPirate;
@@ -64,6 +67,7 @@ public class PlacePirateButton : MonoBehaviour, IBeginDragHandler, IDragHandler,
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        piratePriceText.text = characterStats.cutlassPirateStats.price.ToString();
         buttonComponent = gameObject.GetComponent<Button>();
         CheckCredits();
         economySystem.creditsModified.AddListener(CheckCredits);

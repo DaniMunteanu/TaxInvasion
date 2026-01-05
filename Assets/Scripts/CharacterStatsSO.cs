@@ -6,35 +6,35 @@ public class CharacterStatsSO : ScriptableObject
 {
     public CutlassPirateStats cutlassPirateStats;
     public KatanaAgentStats katanaAgentStats;
-    public float treasureHealth = 10;
-    public int startCredits = 100;
+    public float treasureHealth;
+    public int startCredits;
 }
 
 [Serializable]
 public class CutlassPirateStats
 {
-    public float maxHealth = 20;
-    public float damage = 1;
-    public int price = 50;
+    public float maxHealth;
+    public float damage;
+    public int price;
 
-    public float healthUpgradeBonus = 20;
-    public int healthUpgradePrice = 20;
+    public float healthUpgradeBonus;
+    public int healthUpgradePrice;
 
-    public float damageUpgradeBonus = 5;
-    public int damageUpgradePrice = 20;
+    public float damageUpgradeBonus;
+    public int damageUpgradePrice;
 
-    public float lifestealUpgradeMultiplier = 0.5f;
-    public int lifestealUpgradePrice = 30;
-    public int spinUpgradePrice = 50;
-    public float captainPassiveHealAmmount = 0.1f;
-    public int captainUpgradePrice = 50;
+    public float lifestealUpgradeMultiplier;
+    public int lifestealUpgradePrice;
+    public int spinUpgradePrice;
+    public float captainPassiveHealAmmount;
+    public int captainUpgradePrice;
 }
 
 [Serializable]
 public class KatanaAgentStats
 {
-    public float maxHealth = 15;
-    public float damage = 5;
-    public float treasureDamage = 2;
-    public int creditsDroppedOnDeath = 10;
+    public float maxHealth;
+    public float damage;
+    public float treasureDamage;
+    public int creditsDroppedOnDeath;
 }

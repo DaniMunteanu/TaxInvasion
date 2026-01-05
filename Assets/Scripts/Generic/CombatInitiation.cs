@@ -25,11 +25,11 @@ public class CombatInitiation : MonoBehaviour
     void CheckIfEnemy(Collider2D collision)
     {
         if ((collision.gameObject.layer == 8) && ((collision.gameObject.tag == "Agent" && tag == "Pirate" ) || (collision.gameObject.tag == "Pirate" && tag == "Agent" )))
-            {
-                targetedEnemy = collision.gameObject.transform.parent.gameObject.GetComponent<Character>();
-                targetedEnemy.characterDead.AddListener(OnCharacterDead);
-                characterParent.StartAttackingEnemy(targetedEnemy);
-            }
+        {
+            targetedEnemy = collision.gameObject.transform.parent.gameObject.GetComponent<Character>();
+            targetedEnemy.characterDead.AddListener(OnCharacterDead);
+            characterParent.StartAttackingEnemy(targetedEnemy);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

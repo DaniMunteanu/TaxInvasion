@@ -26,4 +26,24 @@ public class CutlassPirate : Pirate
         base.Update();
     }
 
+    protected override void OnHealthUpgradeBought()
+    {
+        health.IncreaseMaxHealth(characterStats.cutlassPirateStats.healthUpgradeBonus);
+    }
+    protected override void OnDamageUpgradeBought()
+    {
+        damage += characterStats.cutlassPirateStats.damageUpgradeBonus;
+    }
+    protected override void OnLifestealUpgradeBought()
+    {
+        lifestealMultiplier = characterStats.cutlassPirateStats.lifestealUpgradeMultiplier;
+    }
+    protected override void OnUpgrade1Bought()
+    {
+        animator.SetBool("usesAttack1", true);
+    }
+    protected override void OnUpgrade2Bought()
+    {
+        
+    }
 }

@@ -31,13 +31,13 @@ public class Health : MonoBehaviour
             healthDepleted.Invoke();
     }
 
-    void Heal(float healHitpoints)
+    public void Heal(float healHitpoints)
     {
         currentHitpoints = Mathf.Clamp(currentHitpoints + healHitpoints, 0, maxHitpoints);
         healthChanged.Invoke();
     }
 
-    void IncreaseMaxHealth(float bonusHitpoints)
+    public void IncreaseMaxHealth(float bonusHitpoints)
     {
         maxHitpoints += bonusHitpoints;
         Heal(bonusHitpoints);

@@ -32,7 +32,11 @@ public class UpgradePage : MonoBehaviour
     [SerializeField]
     Anchor anchor2;
 
+    public UnityEvent healthUpgradeBought;
+    public UnityEvent damageUpgradeBought;
+    public UnityEvent lifestealUpgradeBought;
     public UnityEvent upgrade1Bought;
+    public UnityEvent upgrade2Bought;
 
     private bool lifestealPicked = false;
 
@@ -107,6 +111,8 @@ public class UpgradePage : MonoBehaviour
         healthButton.interactable = false;
 
         HighlightPath(healthPath);
+
+        healthUpgradeBought.Invoke();
     }
 
     void OnDamageButtonPressed()
@@ -125,6 +131,8 @@ public class UpgradePage : MonoBehaviour
         damageButton.interactable = false;
 
         HighlightPath(damagePath);
+
+        damageUpgradeBought.Invoke();
     }
 
     void OnLifestealButtonPressed()
@@ -145,6 +153,8 @@ public class UpgradePage : MonoBehaviour
 
         HighlightPath(upgrade1Path);
         HighlightPath(upgrade2Path);
+
+        lifestealUpgradeBought.Invoke();
     }
 
     void OnUpgrade1ButtonPressed()
@@ -181,5 +191,7 @@ public class UpgradePage : MonoBehaviour
         ss.disabledSprite = upgrade2Button.spriteState.highlightedSprite;
         upgrade2Button.spriteState = ss;
         upgrade2Button.interactable = false;
+
+        upgrade2Bought.Invoke();
     }
 }

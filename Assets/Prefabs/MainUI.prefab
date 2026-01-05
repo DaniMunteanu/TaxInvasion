@@ -606,6 +606,7 @@ MonoBehaviour:
   placementSystem: {fileID: 0}
   pirateID: 0
   economySystem: {fileID: 0}
+  piratePriceText: {fileID: 5441892328207218325}
   canvasTransform: {fileID: 1722300888735993582}
 --- !u!1 &2346676780027976845
 GameObject:
@@ -867,7 +868,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 90
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 241c6acceca8b844baad6cbcf60cefc7, type: 2}
   m_sharedMaterial: {fileID: -699112959996641730, guid: 241c6acceca8b844baad6cbcf60cefc7, type: 2}

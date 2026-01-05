@@ -11,7 +11,7 @@ public class Character : MonoBehaviour
     public Health health;
     [SerializeField]
     protected float damage;
-    Character currentEnemy;
+    protected Character currentEnemy;
     public UnityEvent<int> characterDead;
     public int creditsDroppedOnDeath;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -67,9 +67,11 @@ public class Character : MonoBehaviour
             animator.SetTrigger("isHurt");
     }
 
-    public void DealDamageToEnemy()
+    public void DealDamageToEnemy(Character targetedEnemy)
     {
-        currentEnemy.CharacterTakeDamage(damage);
+        if (targetedEnemy == null)
+            targetedEnemy = currentEnemy;
+        targetedEnemy.CharacterTakeDamage(damage);
     }
 
     public void OnHealthDepleted()
