@@ -1087,7 +1087,6 @@ GameObject:
   - component: {fileID: 5818643250821977590}
   - component: {fileID: 8435532882657230835}
   - component: {fileID: 1058359838713651439}
-  - component: {fileID: 3539739480199595155}
   m_Layer: 5
   m_Name: NewRoundButton
   m_TagString: Untagged
@@ -1197,19 +1196,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3539739480199595155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4800065303332913469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58bba9c2b88915643a9089eb1ef77d6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NextRoundButton
-  waveSpawner: {fileID: 0}
 --- !u!1 &5244555631937272097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,14 +1324,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 415ab9eeb151539418f10f88814dfdc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainUI
-  characterStats: {fileID: 0}
+  characterStats: {fileID: 11400000, guid: 5821ed3a01f1dde4bbb12db961cf2343, type: 2}
   economySystem: {fileID: 0}
+  waveSpawner: {fileID: 0}
   treasureHealthbar: {fileID: 7214524300015821222}
   treasureHealth: {fileID: 0}
   treasureHPText: {fileID: 327829904612608877}
   creditsSpentText: {fileID: 999447651432183401}
   creditsTotalText: {fileID: 2081532373057405988}
   roundText: {fileID: 1368472054834348693}
+  newRoundButton: {fileID: 1058359838713651439}
+  normalSpeedButton: {fileID: 4586166780904408785}
+  doubleSpeedButton: {fileID: 3817477978285441408}
 --- !u!1 &5359713222097005685
 GameObject:
   m_ObjectHideFlags: 0

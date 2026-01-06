@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class Agent : Character
 {
-    public int laneIndex;
+    public LaneWave lane;
+    public UnityEvent<LaneWave> agentDead;
     public TreasurePile treasurePile;
     protected Transform currentPirateTarget = null;
     protected Transform currentTarget;
-    
     protected NavMeshAgent agent;
     [SerializeField]
     protected float moveSpeed;
@@ -17,7 +18,8 @@ public class Agent : Character
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     new protected void Start()
     {
-        base.Start();
+        animator.SetBool("isAttacking", false);
+        health.healthDepleted.AddListener(OnHealthDepleted);
 
         agent = gameObject.GetComponent<NavMeshAgent>();
 
@@ -74,7 +76,7 @@ public class Agent : Character
         agent.SetDestination(currentTarget.position);
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void CheckIfEnemy(Collider2D collision)
     {
         if(currentPirateTarget == null && collision.gameObject.tag == "Pirate")
         {   
@@ -95,9 +97,26 @@ public class Agent : Character
         }
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        CheckIfEnemy(collision);
+    }
+
+    void OTriggerStay2D(Collider2D collision)
+    {
+        CheckIfEnemy(collision);
+    }
+
     void StealTreasure()
     {
         treasurePile.treasureHealth.TakeDamage(treasureDamage);
+        Destroy(this.gameObject);
+    }
+
+    new public void OnHealthDepleted()
+    {
+        characterDead.Invoke(creditsDroppedOnDeath);
+        agentDead.Invoke(lane);
         Destroy(this.gameObject);
     }
 }

@@ -13,15 +13,20 @@ public class TreasurePile : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private float subdivision = 2;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+        treasureHealth.maxHitpoints = characterStats.treasureHealth;
+        treasureHealth.currentHitpoints = characterStats.treasureHealth;
+        subdivision = treasureHealth.maxHitpoints / 5;
+    }
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = sprites[5];
         treasureHealth.healthChanged.AddListener(UpdateSprite);
-        treasureHealth.maxHitpoints = characterStats.treasureHealth;
-        treasureHealth.currentHitpoints = characterStats.treasureHealth;
     }
 
     // Update is called once per frame

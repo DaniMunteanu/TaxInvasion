@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83048086c567e4543a2eeb5527a50992, type: 3}
+  m_Name: Round2
+  m_EditorClassIdentifier: Assembly-CSharp::Round
+  lanes:
+  - {fileID: 11400000, guid: b17d44dbe2cfa6f4cab9178db4f60965, type: 2}
+  - {fileID: 11400000, guid: 8a7a43ce11140b347862922847a042c8, type: 2}

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainUI : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class MainUI : MonoBehaviour
     CharacterStatsSO characterStats;
     [SerializeField]
     EconomySystem economySystem;
+    [SerializeField]
+    WaveSpawner waveSpawner;
 
     public HealthBar treasureHealthbar;
     public Health treasureHealth;
@@ -15,6 +18,13 @@ public class MainUI : MonoBehaviour
     public TMP_Text creditsSpentText;
     public TMP_Text creditsTotalText;
     public TMP_Text roundText;
+
+    [SerializeField]
+    Button newRoundButton;
+    [SerializeField]
+    Button normalSpeedButton;
+    [SerializeField]
+    Button doubleSpeedButton;
 
     private Dictionary<Vector3Int,PirateProfile> pirateProfiles = new Dictionary<Vector3Int, PirateProfile>();
     private PirateProfile lastShownPirateProfile;
@@ -25,8 +35,15 @@ public class MainUI : MonoBehaviour
         InitializePirateProfilesData();
         OnTreasureHealthChanged();
         UpdateTotalCreditsText();
+        UpdateRoundText();
         treasureHealth.healthChanged.AddListener(OnTreasureHealthChanged);
         economySystem.creditsModified.AddListener(UpdateTotalCreditsText);
+        waveSpawner.newRoundStarted.AddListener(UpdateRoundText);
+
+        newRoundButton.onClick.AddListener(OnNewRoundButtonPressed);
+        normalSpeedButton.onClick.AddListener(OnNormalSpeedButtonPressed);
+        doubleSpeedButton.onClick.AddListener(OnDoubleSpeedButtonPressed);
+        waveSpawner.roundOver.AddListener(OnRoundOver);
     }
 
     void OnTreasureHealthChanged()
@@ -37,6 +54,42 @@ public class MainUI : MonoBehaviour
     void UpdateTotalCreditsText()
     {
         creditsTotalText.text = economySystem.currentCredits.ToString();
+    }
+
+    void UpdateRoundText()
+    {
+        roundText.text = waveSpawner.roundCount + "/" + waveSpawner.MAX_ROUNDS;
+    }
+
+    void OnNewRoundButtonPressed()
+    {
+        waveSpawner.StartNewRound();
+        newRoundButton.gameObject.SetActive(false);
+        doubleSpeedButton.gameObject.SetActive(false);
+        normalSpeedButton.gameObject.SetActive(true);
+    }
+
+    void OnNormalSpeedButtonPressed()
+    {
+        Time.timeScale = 2f;
+        newRoundButton.gameObject.SetActive(false);
+        normalSpeedButton.gameObject.SetActive(false);
+        doubleSpeedButton.gameObject.SetActive(true);
+    }
+    void OnDoubleSpeedButtonPressed()
+    {
+        Time.timeScale = 1f;
+        newRoundButton.gameObject.SetActive(false);
+        doubleSpeedButton.gameObject.SetActive(false);
+        normalSpeedButton.gameObject.SetActive(true);
+    }
+
+    void OnRoundOver()
+    {
+        Time.timeScale = 1f;
+        doubleSpeedButton.gameObject.SetActive(false);
+        normalSpeedButton.gameObject.SetActive(false);
+        newRoundButton.gameObject.SetActive(true);
     }
 
     private void InitializePirateProfilesData()
@@ -99,7 +152,6 @@ public class MainUI : MonoBehaviour
         ShowPirateProfile(pirateGridPosition);
     }
 
-    //micunealta pe care o vom folosi mai tarziu  >__<
     public void RemovePirateProfile(Vector3Int pirateGridPosition)
     {
         Destroy(pirateProfiles[pirateGridPosition].gameObject);

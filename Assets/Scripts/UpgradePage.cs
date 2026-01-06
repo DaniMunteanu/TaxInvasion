@@ -78,15 +78,10 @@ public class UpgradePage : MonoBehaviour
         foreach (Transform segment in path.transform)
         {
             RawImage currentSegment = segment.GetComponent<RawImage>();
-            currentSegment.GetComponent<RawImage>().color = new Color(0,0,0,1);
-            //Invoke("HighlightPathSegment",2);
+            Color segmentColor = currentSegment.GetComponent<RawImage>().color;
+            segmentColor.a = 1;
+            currentSegment.GetComponent<RawImage>().color = segmentColor;
         }
-    }
-
-    void HighlightPathSegment()
-    {
-        //currentSegment.color = new Color(255,255,255,1);
-        //currentSegment.GetComponent<RawImage>().color = new Color(0,0,0,1);
     }
 
     // Update is called once per frame

@@ -77,7 +77,6 @@ public class Character : MonoBehaviour
     public void OnHealthDepleted()
     {
         characterDead.Invoke(creditsDroppedOnDeath);
-        Debug.Log("Character dead!");
         Destroy(this.gameObject);
     }
 

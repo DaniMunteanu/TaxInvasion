@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -15,11 +16,14 @@ public class WaveSpawner : MonoBehaviour
     EconomySystem economySystem;
 
     private int NUMBER_OF_LANES = 17;
-    private int MAX_ROUNDS = 1;
-    private int roundCount = 1;
+    public int MAX_ROUNDS = 5;
+    public int roundCount = 0;
+    public UnityEvent newRoundStarted;
+    public UnityEvent roundOver;
     private int[] agentsSpawned;
     private Vector3[] lanePositions;
     private Round currentRound;
+    private int currentRoundTotalEnemies;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,11 +35,24 @@ public class WaveSpawner : MonoBehaviour
 
     public void StartNewRound()
     {
-        currentRound = Resources.Load<Round>("Round" + roundCount);
+        roundCount++;
+        newRoundStarted.Invoke();
+
+        currentRound = Resources.Load<Round>("Round" + roundCount + "/Round" + roundCount);
+        CountCurrentRoundEnemies();
 
         agentsSpawned = new int[NUMBER_OF_LANES];
         
         SpawnAgents();
+    }
+
+    void CountCurrentRoundEnemies()
+    {
+        currentRoundTotalEnemies = 0;
+        foreach(var lane in currentRound.lanes)
+        {
+            currentRoundTotalEnemies += lane.agentsList.Count;
+        }
     }
 
     void SpawnAgents()
@@ -55,7 +72,9 @@ public class WaveSpawner : MonoBehaviour
             Agent newAgent = Instantiate(lane.agents.Dequeue());
             newAgent.transform.position = lanePositions[lane.laneIndex];
             newAgent.treasurePile = treasureTarget;
-            newAgent.laneIndex = lane.laneIndex;
+            newAgent.lane = lane;
+
+            newAgent.agentDead.AddListener(OnAgentDead);
 
             economySystem.RegisterCharacterDeath(newAgent);
 
@@ -63,6 +82,21 @@ public class WaveSpawner : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    void OnAgentDead(LaneWave lane)
+    {
+        agentsSpawned[lane.laneIndex]--;
+        currentRoundTotalEnemies--;
+
+        if (currentRoundTotalEnemies == 0)
+        {
+            roundOver.Invoke();
+            return;
+        }
+
+        if (lane.agents.Count > 0)
+            TryToSpawn(lane);
     }
 
     // Update is called once per frame
