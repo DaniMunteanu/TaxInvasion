@@ -154,6 +154,7 @@ public class MainUI : MonoBehaviour
 
     public void RemovePirateProfile(Vector3Int pirateGridPosition)
     {
+        TooltipSystem.Hide();
         Destroy(pirateProfiles[pirateGridPosition].gameObject);
         pirateProfiles[pirateGridPosition] = null;
     }

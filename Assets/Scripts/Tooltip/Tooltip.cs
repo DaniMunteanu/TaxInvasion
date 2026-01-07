@@ -1,7 +1,9 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class Tooltip : MonoBehaviour
 {
@@ -58,6 +60,13 @@ public class Tooltip : MonoBehaviour
 
     void UpdateLayout()
     {
+        Vector2 mousePosition = Mouse.current.position.ReadValue();
+        float pivotX = mousePosition.x / Screen.width;
+        float pivotY = mousePosition.y / Screen.height;
+
         layoutElement.enabled = Math.Max(header.preferredWidth, description.preferredWidth) >= layoutElement.preferredWidth;
+        
+        gameObject.GetComponent<RectTransform>().pivot = new Vector2(pivotX, pivotY); 
+        transform.position = mousePosition;
     }
 }

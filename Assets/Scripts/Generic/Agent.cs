@@ -110,6 +110,7 @@ public class Agent : Character
     void StealTreasure()
     {
         treasurePile.treasureHealth.TakeDamage(treasureDamage);
+        agentDead.Invoke(lane);
         Destroy(this.gameObject);
     }
 
