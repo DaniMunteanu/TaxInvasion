@@ -18,6 +18,12 @@ public class UpgradePage : MonoBehaviour
     [SerializeField]
     Button upgrade2Button;
 
+    private TooltipTrigger healthTooltipTrigger;
+    private TooltipTrigger damageTooltipTrigger;
+    private TooltipTrigger lifestealTooltipTrigger;
+    private TooltipTrigger upgrade1TooltipTrigger;
+    private TooltipTrigger upgrade2TooltipTrigger;
+
     [SerializeField]
     Image healthPath;
     [SerializeField]
@@ -58,9 +64,20 @@ public class UpgradePage : MonoBehaviour
         lifestealUpgradePrice = characterStats.cutlassPirateStats.lifestealUpgradePrice;
         upgrade1Price = characterStats.cutlassPirateStats.spinUpgradePrice;
         upgrade2Price = characterStats.cutlassPirateStats.captainUpgradePrice;
+
+        healthTooltipTrigger.costText = healthUpgradePrice.ToString();
+        damageTooltipTrigger.costText = damageUpgradePrice.ToString();
+        lifestealTooltipTrigger.costText = lifestealUpgradePrice.ToString();
+        upgrade1TooltipTrigger.costText = upgrade1Price.ToString();
+        upgrade2TooltipTrigger.costText = upgrade2Price.ToString();
     }
 
     void Awake()
+    {
+        InitializeButtonsData();
+    }
+
+    void InitializeButtonsData()
     {
         lifestealButton.interactable = false;
         upgrade1Button.interactable = false;
@@ -71,6 +88,12 @@ public class UpgradePage : MonoBehaviour
         lifestealButton.onClick.AddListener(OnLifestealButtonPressed);
         upgrade1Button.onClick.AddListener(OnUpgrade1ButtonPressed);
         upgrade2Button.onClick.AddListener(OnUpgrade2ButtonPressed);
+
+        healthTooltipTrigger = healthButton.gameObject.GetComponent<TooltipTrigger>();
+        damageTooltipTrigger = damageButton.gameObject.GetComponent<TooltipTrigger>();
+        lifestealTooltipTrigger = lifestealButton.gameObject.GetComponent<TooltipTrigger>();
+        upgrade1TooltipTrigger = upgrade1Button.gameObject.GetComponent<TooltipTrigger>();
+        upgrade2TooltipTrigger = upgrade2Button.gameObject.GetComponent<TooltipTrigger>();
     }
 
     void HighlightPath(Image path)

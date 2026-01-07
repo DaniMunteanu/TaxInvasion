@@ -12,12 +12,20 @@ public class PirateProfile : MonoBehaviour
     [SerializeField]
     private Button sellButton;
 
+    [SerializeField]
+    TooltipTrigger tooltipTrigger;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         transform.localScale = new Vector3(1, 1, 1);
         transform.localPosition = new Vector3(0, 0, 0);
         sellButton.onClick.AddListener(OnSellButtonPressed);
+
+        tooltipTrigger.headerText = null;
+        tooltipTrigger.descriptionText = healthBar.health.currentHitpoints + "/" + healthBar.health.maxHitpoints;
+        tooltipTrigger.costText = null;
+        healthBar.health.healthChanged.AddListener(UpdateTooltipTrigger);
     }
 
     // Update is called once per frame
@@ -29,5 +37,11 @@ public class PirateProfile : MonoBehaviour
     void OnSellButtonPressed()
     {
         healthBar.health.healthDepleted.Invoke();
+    }
+
+    void UpdateTooltipTrigger()
+    {
+        tooltipTrigger.descriptionText = healthBar.health.currentHitpoints + "/" + healthBar.health.maxHitpoints;
+        TooltipSystem.UpdateText(null, tooltipTrigger.descriptionText, null);
     }
 }

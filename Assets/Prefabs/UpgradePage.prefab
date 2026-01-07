@@ -93,7 +93,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &310185017428308099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe099a0956934d458e70b056d9d3edf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpgradePage
+  characterStats: {fileID: 0}
   economySystem: {fileID: 0}
   healthButton: {fileID: 1781595842348095947}
   damageButton: {fileID: 3676851873516752808}
@@ -135,7 +136,19 @@ MonoBehaviour:
   upgrade2Path: {fileID: 6534583835574650573}
   anchor1: {fileID: 1866287993817141883}
   anchor2: {fileID: 6278904601193480268}
+  healthUpgradeBought:
+    m_PersistentCalls:
+      m_Calls: []
+  damageUpgradeBought:
+    m_PersistentCalls:
+      m_Calls: []
+  lifestealUpgradeBought:
+    m_PersistentCalls:
+      m_Calls: []
   upgrade1Bought:
+    m_PersistentCalls:
+      m_Calls: []
+  upgrade2Bought:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &330582954319911955
@@ -228,6 +241,7 @@ GameObject:
   - component: {fileID: 8659257666192595374}
   - component: {fileID: 4161025456226271694}
   - component: {fileID: 2113083408098768263}
+  - component: {fileID: 6840298529838484672}
   m_Layer: 5
   m_Name: LifestealButton
   m_TagString: Untagged
@@ -336,6 +350,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6840298529838484672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501756417437617666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b79229a44283474a9b08e61c248a065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TooltipTrigger
+  headerText: LIFESTEAL!
+  descriptionText: This unit heals for a small portion of the damage dealt to enemies.
+  costText: 
 --- !u!1 &1092961622229274228
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,6 +665,7 @@ GameObject:
   - component: {fileID: 5217733405838207038}
   - component: {fileID: 7705643994884601355}
   - component: {fileID: 1781595842348095947}
+  - component: {fileID: 1105456114640904702}
   m_Layer: 5
   m_Name: HealthButton
   m_TagString: Untagged
@@ -744,6 +774,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1105456114640904702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099361826857644923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b79229a44283474a9b08e61c248a065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TooltipTrigger
+  headerText: HEALTH UP!
+  descriptionText: This unit heals and increases their maximum health points.
+  costText: 
 --- !u!1 &3750157710293893254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,6 +1679,7 @@ GameObject:
   - component: {fileID: 3172346707210641155}
   - component: {fileID: 101550845297623554}
   - component: {fileID: 3676851873516752808}
+  - component: {fileID: 3198540403176966529}
   m_Layer: 5
   m_Name: DamageButton
   m_TagString: Untagged
@@ -1742,6 +1788,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3198540403176966529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6371394010572677334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b79229a44283474a9b08e61c248a065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TooltipTrigger
+  headerText: DAMAGE UP!
+  descriptionText: This unit permanently increases their maximum damage.
+  costText: 
 --- !u!1 &6831045671648247996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,14 +2560,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1546086768571110710, guid: d975bba7b183ef94f8c2b7e161134a3f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1723889566468993564}
   m_SourcePrefab: {fileID: 100100000, guid: d975bba7b183ef94f8c2b7e161134a3f, type: 3}
+--- !u!1 &1601405546230741408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1546086768571110710, guid: d975bba7b183ef94f8c2b7e161134a3f, type: 3}
+  m_PrefabInstance: {fileID: 238013916707335318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1723889566468993564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601405546230741408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b79229a44283474a9b08e61c248a065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TooltipTrigger
+  headerText: CAPTAIN!
+  descriptionText: This unit and their adjacent allies regenerate health during the
+    rounds. The effect does not stack.
+  costText: 
 --- !u!114 &2006312741457251277 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1772802708115744603, guid: d975bba7b183ef94f8c2b7e161134a3f, type: 3}
   m_PrefabInstance: {fileID: 238013916707335318}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1601405546230741408}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -2639,7 +2724,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1546086768571110710, guid: d975bba7b183ef94f8c2b7e161134a3f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 917896254083156022}
   m_SourcePrefab: {fileID: 100100000, guid: d975bba7b183ef94f8c2b7e161134a3f, type: 3}
 --- !u!114 &1866287993817141883 stripped
 MonoBehaviour:
@@ -2662,9 +2750,30 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1772802708115744603, guid: d975bba7b183ef94f8c2b7e161134a3f, type: 3}
   m_PrefabInstance: {fileID: 5586958433041039009}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6412018255037492119}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &6412018255037492119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1546086768571110710, guid: d975bba7b183ef94f8c2b7e161134a3f, type: 3}
+  m_PrefabInstance: {fileID: 5586958433041039009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &917896254083156022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6412018255037492119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b79229a44283474a9b08e61c248a065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TooltipTrigger
+  headerText: SPIN 2 WIN!
+  descriptionText: Instead of attacking a single enemy, this unit hits every enemy
+    which comes close enough.
+  costText: 
