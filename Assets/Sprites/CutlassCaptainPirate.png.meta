@@ -1,0 +1,626 @@
+fileFormatVersion: 2
+guid: 60abbaf029161af4eb3732b501522c46
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7489271202058222427
+    second: CutlassCaptainPirate_0
+  - first:
+      213: 1684989013932650600
+    second: CutlassCaptainPirate_1
+  - first:
+      213: -3771621548536298458
+    second: CutlassCaptainPirate_2
+  - first:
+      213: -5112988459390845081
+    second: CutlassCaptainPirate_3
+  - first:
+      213: 2183335289614637744
+    second: CutlassCaptainPirate_4
+  - first:
+      213: -1669691922297447889
+    second: CutlassCaptainPirate_5
+  - first:
+      213: 5457688278442512996
+    second: CutlassCaptainPirate_6
+  - first:
+      213: -2219143111834511570
+    second: CutlassCaptainPirate_7
+  - first:
+      213: 299835070852041135
+    second: CutlassCaptainPirate_8
+  - first:
+      213: 2260401561356430452
+    second: CutlassCaptainPirate_9
+  - first:
+      213: 8267145166801849819
+    second: CutlassCaptainPirate_10
+  - first:
+      213: -5392552477011611223
+    second: CutlassCaptainPirate_11
+  - first:
+      213: -3556804643850030230
+    second: CutlassCaptainPirate_12
+  - first:
+      213: -7917440391467412977
+    second: CutlassCaptainPirate_13
+  - first:
+      213: -6125246977062986443
+    second: CutlassCaptainPirate_14
+  - first:
+      213: -5653951488936541842
+    second: CutlassCaptainPirate_15
+  - first:
+      213: -6411444515197650922
+    second: CutlassCaptainPirate_16
+  - first:
+      213: -1460744187967329571
+    second: CutlassCaptainPirate_17
+  - first:
+      213: -7541279102838830910
+    second: CutlassCaptainPirate_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 246
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b3e397a7c3fe760800000000000000
+      internalID: 7489271202058222427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 246
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86034e9a498426710800000000000000
+      internalID: 1684989013932650600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 246
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624094c3f2288abc0800000000000000
+      internalID: -3771621548536298458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 205
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76f365106140b09b0800000000000000
+      internalID: -5112988459390845081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_4
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 205
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba1e0bc0e3cc4e10800000000000000
+      internalID: 2183335289614637744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_5
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 205
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2a1f170b0014d8e0800000000000000
+      internalID: -1669691922297447889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 164
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462116bb29a9dbb40800000000000000
+      internalID: 5457688278442512996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_7
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 164
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e275959e8150431e0800000000000000
+      internalID: -2219143111834511570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_8
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 164
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa90759886a392400800000000000000
+      internalID: 299835070852041135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 123
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47c63627e3f8e5f10800000000000000
+      internalID: 2260401561356430452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_10
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 123
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bddcfcd5abccab270800000000000000
+      internalID: 8267145166801849819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_11
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 123
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1f117d71ec925b0800000000000000
+      internalID: -5392552477011611223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 82
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a63fbdb6501b3aec0800000000000000
+      internalID: -3556804643850030230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_13
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 82
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f02514099e99f1290800000000000000
+      internalID: -7917440391467412977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_14
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 82
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53d10aac350cefaa0800000000000000
+      internalID: -6125246977062986443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 41
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6185a4a3112981b0800000000000000
+      internalID: -5653951488936541842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_16
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 41
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6187486ce29f507a0800000000000000
+      internalID: -6411444515197650922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_17
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 41
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddaad7086e46abbe0800000000000000
+      internalID: -1460744187967329571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassCaptainPirate_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c807338c9ef75790800000000000000
+      internalID: -7541279102838830910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 28ff068556cde2c4398566d5581746cd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":36.0,"y":41.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.1463414579629898},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":1,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      CutlassCaptainPirate_0: 7489271202058222427
+      CutlassCaptainPirate_1: 1684989013932650600
+      CutlassCaptainPirate_10: 8267145166801849819
+      CutlassCaptainPirate_11: -5392552477011611223
+      CutlassCaptainPirate_12: -3556804643850030230
+      CutlassCaptainPirate_13: -7917440391467412977
+      CutlassCaptainPirate_14: -6125246977062986443
+      CutlassCaptainPirate_15: -5653951488936541842
+      CutlassCaptainPirate_16: -6411444515197650922
+      CutlassCaptainPirate_17: -1460744187967329571
+      CutlassCaptainPirate_18: -7541279102838830910
+      CutlassCaptainPirate_2: -3771621548536298458
+      CutlassCaptainPirate_3: -5112988459390845081
+      CutlassCaptainPirate_4: 2183335289614637744
+      CutlassCaptainPirate_5: -1669691922297447889
+      CutlassCaptainPirate_6: 5457688278442512996
+      CutlassCaptainPirate_7: -2219143111834511570
+      CutlassCaptainPirate_8: 299835070852041135
+      CutlassCaptainPirate_9: 2260401561356430452
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

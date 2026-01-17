@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8678820134277799003}
   - component: {fileID: 7561427123318010180}
   m_Layer: 7
-  m_Name: KatanaAgent
+  m_Name: KatanaAgent1
   m_TagString: Agent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
