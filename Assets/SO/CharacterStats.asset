@@ -24,7 +24,7 @@ MonoBehaviour:
     lifestealUpgradePrice: 0
     spinUpgradePrice: 0
     captainPassiveHealAmmount: 0.1
-    captainUpgradePrice: 50
+    captainUpgradePrice: 0
   katanaAgentStats:
     maxHealth: 15
     damage: 5

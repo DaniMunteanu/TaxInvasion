@@ -180,6 +180,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: attackUpRight
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: usesAttack2
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5272580210409064260}
   m_Solo: 0
@@ -318,6 +321,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: attackUp
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: usesAttack2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2000396603543608387}
@@ -542,6 +548,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: usesAttack1
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: usesAttack2
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5713308067648208322}
   m_Solo: 0
@@ -716,6 +725,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: attackUpLeft
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: usesAttack2
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4551541801957898080}
   m_Solo: 0
@@ -743,6 +755,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: attackDownLeft
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: usesAttack2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 219693551379440150}
@@ -803,6 +818,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: attackDown
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: usesAttack2
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7100190390806736845}
   m_Solo: 0
@@ -830,6 +848,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: attackDownRight
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: usesAttack2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5766918785201363816}
@@ -884,6 +905,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: usesAttack1
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: usesAttack2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -720566573775137686}

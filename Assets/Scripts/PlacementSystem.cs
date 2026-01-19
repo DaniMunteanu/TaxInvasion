@@ -25,6 +25,7 @@ public class PlacementSystem : MonoBehaviour
     private Vector3 cellCenterPos;
     private Dictionary<Vector3Int, Pirate> placedPirates = new Dictionary<Vector3Int,Pirate>();
     private Pirate lastSelectedPirate;
+    
 
     private void Awake()
     {
