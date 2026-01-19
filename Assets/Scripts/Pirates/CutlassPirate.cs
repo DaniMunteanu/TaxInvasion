@@ -44,6 +44,6 @@ public class CutlassPirate : Pirate
     }
     protected override void OnUpgrade2Bought()
     {
-        
+        animator.SetBool("usesAttack2", true);
     }
 }

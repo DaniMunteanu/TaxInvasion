@@ -74,6 +74,10 @@ public class Agent : Character
         currentPirateTarget = null;
         currentTarget = treasurePile.transform;
         agent.SetDestination(currentTarget.position);
+        SetOrientationForCurrentTarget();
+
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
     }
 
     void CheckIfEnemy(Collider2D collision)
@@ -84,6 +88,7 @@ public class Agent : Character
             currentPirateTarget.gameObject.GetComponent<Character>().characterDead.AddListener(OnEnemyPirateDead);
             currentTarget = currentPirateTarget;
             agent.SetDestination(currentTarget.position);
+            agent.isStopped = false;
             SetOrientationForCurrentTarget();
             agent.stoppingDistance = 1;
         }
@@ -102,10 +107,12 @@ public class Agent : Character
         CheckIfEnemy(collision);
     }
 
+    /*
     void OTriggerStay2D(Collider2D collision)
     {
         CheckIfEnemy(collision);
     }
+    */
 
     void StealTreasure()
     {

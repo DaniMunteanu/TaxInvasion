@@ -20,6 +20,9 @@ public class CombatInitiation : MonoBehaviour
     void OnCharacterDead(int creditsEarnedOnDeath)
     {
         targetedEnemy = null;
+
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
     }
 
     void CheckIfEnemy(Collider2D collision)
@@ -40,11 +43,4 @@ public class CombatInitiation : MonoBehaviour
         }
     }
 
-    void OnTriggerStay2D(Collider2D collision)
-    {
-        if (targetedEnemy == null)
-        {
-            CheckIfEnemy(collision);
-        }
-    }
 }
