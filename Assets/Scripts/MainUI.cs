@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class MainUI : MonoBehaviour
@@ -20,11 +21,23 @@ public class MainUI : MonoBehaviour
     public TMP_Text roundText;
 
     [SerializeField]
+    Button settingsButton;
+    [SerializeField]
     Button newRoundButton;
     [SerializeField]
     Button normalSpeedButton;
     [SerializeField]
     Button doubleSpeedButton;
+
+    [SerializeField]
+    PauseScreen settingsScreen;
+    [SerializeField]
+    PauseScreen victoryScreen;
+    [SerializeField]
+    PauseScreen gameOverScreen;
+    private float previousTimeScale = 1f;
+    private bool paused = false;
+    private bool pausable = false;
 
     private Dictionary<Vector3Int,PirateProfile> pirateProfiles = new Dictionary<Vector3Int, PirateProfile>();
     private PirateProfile lastShownPirateProfile;
@@ -41,9 +54,12 @@ public class MainUI : MonoBehaviour
         waveSpawner.newRoundStarted.AddListener(UpdateRoundText);
 
         newRoundButton.onClick.AddListener(OnNewRoundButtonPressed);
+        settingsButton.onClick.AddListener(OnSettingsButtonPressed);
         normalSpeedButton.onClick.AddListener(OnNormalSpeedButtonPressed);
         doubleSpeedButton.onClick.AddListener(OnDoubleSpeedButtonPressed);
         waveSpawner.roundOver.AddListener(OnRoundOver);
+
+        pausable = true;
     }
 
     void OnTreasureHealthChanged()
@@ -59,6 +75,16 @@ public class MainUI : MonoBehaviour
     void UpdateRoundText()
     {
         roundText.text = waveSpawner.roundCount + "/" + waveSpawner.MAX_ROUNDS;
+    }
+
+    void OnSettingsButtonPressed()
+    {
+        settingsScreen.gameObject.SetActive(!settingsScreen.gameObject.activeSelf);
+
+        previousTimeScale = Time.timeScale;
+        Time.timeScale = 0f;
+
+        paused = !paused;
     }
 
     void OnNewRoundButtonPressed()
@@ -171,6 +197,21 @@ public class MainUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Keyboard.current.escapeKey.wasPressedThisFrame && pausable)
+        {
+            settingsScreen.gameObject.SetActive(!settingsScreen.gameObject.activeSelf);
+
+            if (paused)
+            {
+                Time.timeScale = previousTimeScale;
+            }
+            else
+            {
+                previousTimeScale = Time.timeScale;
+                Time.timeScale = 0f;
+            }
+
+            paused = !paused;
+        }
     }
 }
