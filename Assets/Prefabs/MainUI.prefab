@@ -2856,6 +2856,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4016357673156236027, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016357673156236027, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016357673156236027, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2403033667780645279}
+    - target: {fileID: 4016357673156236027, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016357673156236027, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016357673156236027, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016357673156236027, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7010362499361754553, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
       propertyPath: m_OverrideSorting
       value: 0
@@ -3139,6 +3167,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1722300888735993582}
     m_Modifications:
+    - target: {fileID: 884693616217540544, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_text
+      value: Play Again
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427332528227658442, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_Name
+      value: PlayAgainButton
+      objectReference: {fileID: 0}
     - target: {fileID: 1818422235241345757, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
@@ -3260,6 +3296,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1722300888735993582}
     m_Modifications:
+    - target: {fileID: 884693616217540544, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_text
+      value: Play Again
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427332528227658442, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_Name
+      value: PlayAgainButton
+      objectReference: {fileID: 0}
     - target: {fileID: 1818422235241345757, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1

@@ -50,8 +50,12 @@ public class MainUI : MonoBehaviour
         UpdateTotalCreditsText();
         UpdateRoundText();
         treasureHealth.healthChanged.AddListener(OnTreasureHealthChanged);
+        treasureHealth.healthDepleted.AddListener(OnTreasureHealthDepleted);
+
         economySystem.creditsModified.AddListener(UpdateTotalCreditsText);
+
         waveSpawner.newRoundStarted.AddListener(UpdateRoundText);
+        waveSpawner.gameWon.AddListener(OnGameWon);
 
         newRoundButton.onClick.AddListener(OnNewRoundButtonPressed);
         settingsButton.onClick.AddListener(OnSettingsButtonPressed);
@@ -62,9 +66,34 @@ public class MainUI : MonoBehaviour
         pausable = true;
     }
 
+    void OnGameWon()
+    {
+        if (pausable)
+        {
+            pausable = false;
+
+            victoryScreen.gameObject.SetActive(true);
+
+            Time.timeScale = 0f;
+
+            paused = !paused;
+        }
+    }
+
     void OnTreasureHealthChanged()
     {
         treasureHPText.text = treasureHealth.currentHitpoints + "/" + treasureHealth.maxHitpoints;
+    }
+
+    void OnTreasureHealthDepleted()
+    {
+        pausable = false;
+
+        gameOverScreen.gameObject.SetActive(true);
+
+        Time.timeScale = 0f;
+
+        paused = !paused;
     }
 
     void UpdateTotalCreditsText()
@@ -75,6 +104,15 @@ public class MainUI : MonoBehaviour
     void UpdateRoundText()
     {
         roundText.text = waveSpawner.roundCount + "/" + waveSpawner.MAX_ROUNDS;
+    }
+
+    public void ResumeGame()
+    {
+        settingsScreen.gameObject.SetActive(!settingsScreen.gameObject.activeSelf);
+
+        Time.timeScale = previousTimeScale;
+
+        paused = !paused;
     }
 
     void OnSettingsButtonPressed()

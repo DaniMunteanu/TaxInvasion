@@ -20,6 +20,7 @@ public class WaveSpawner : MonoBehaviour
     public int roundCount = 0;
     public UnityEvent newRoundStarted;
     public UnityEvent roundOver;
+    public UnityEvent gameWon;
     private int[] agentsSpawned;
     private Vector3[] lanePositions;
     private Round currentRound;
@@ -27,6 +28,8 @@ public class WaveSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        roundOver.AddListener(OnRoundOver);
+
         lanePositions = new Vector3[NUMBER_OF_LANES];
 
         for(int index = 0; index < NUMBER_OF_LANES; index++)
@@ -97,6 +100,12 @@ public class WaveSpawner : MonoBehaviour
 
         if (lane.agents.Count > 0)
             TryToSpawn(lane);
+    }
+
+    void OnRoundOver()
+    {
+        if (roundCount == MAX_ROUNDS)
+            gameWon.Invoke();
     }
 
     // Update is called once per frame
