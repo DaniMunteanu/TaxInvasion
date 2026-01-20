@@ -175,7 +175,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0fa8f805089f43a4bb8486e036b0d4e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -314,11 +314,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   creditsDroppedOnDeath: 0
-  highlightShader: {fileID: -6465566751694194690, guid: a089245979a0a8346a1d5b5b8637a57f, type: 3}
   pirateProfilePrefab: {fileID: 6220336833325657726, guid: b15afc3fcbbb367419f8f28f2dcc6c61, type: 3}
   pirateProfileInstance: {fileID: 0}
   gridPosition: {x: 0, y: 0, z: 0}
+  placeBuffTiles:
+    m_PersistentCalls:
+      m_Calls: []
+  removeBuffTiles:
+    m_PersistentCalls:
+      m_Calls: []
   price: 90
+  highlightMaterial: {fileID: 2100000, guid: 0fa8f805089f43a4bb8486e036b0d4e1, type: 2}
 --- !u!1 &4489347895457431418
 GameObject:
   m_ObjectHideFlags: 0

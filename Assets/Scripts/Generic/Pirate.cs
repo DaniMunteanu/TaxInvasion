@@ -4,14 +4,15 @@ using UnityEngine.Events;
 public abstract class Pirate : Character
 {
     [SerializeField]
-    Shader highlightShader;
-    [SerializeField]
     public PirateProfile pirateProfilePrefab;
     public PirateProfile pirateProfileInstance;
     public Vector3Int gridPosition;
     public UnityEvent<Vector3Int> placeBuffTiles;
     public UnityEvent<Vector3Int> removeBuffTiles;
     public int price;
+
+    [SerializeField]
+    Material highlightMaterial;
     private Material defaultMaterial;
     private SpriteRenderer spriteRenderer;
     protected float lifestealMultiplier = 0;
@@ -20,7 +21,7 @@ public abstract class Pirate : Character
     {
         base.Start();
         creditsDroppedOnDeath = price/2;
-        Highlight();
+        //Highlight();
 
         pirateProfileInstance.upgradePage.healthUpgradeBought.AddListener(OnHealthUpgradeBought);
         pirateProfileInstance.upgradePage.damageUpgradeBought.AddListener(OnDamageUpgradeBought);
@@ -52,7 +53,7 @@ public abstract class Pirate : Character
 
     public void Highlight()
     {
-        spriteRenderer.material = new Material(highlightShader);
+        spriteRenderer.material = highlightMaterial;
     }
 
     public void UnHighlight()

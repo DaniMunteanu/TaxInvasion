@@ -207,11 +207,13 @@ public class PlacementSystem : MonoBehaviour
                     lastSelectedPirate = placedPirates[pirateSelector];
                 }
             }
+            /*
             else
             {
                 if (lastSelectedPirate != null)
                     lastSelectedPirate.UnHighlight();
             }
+            */
         }
     }
 
