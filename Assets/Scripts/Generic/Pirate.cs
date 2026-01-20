@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class Pirate : Character
 {
@@ -8,6 +9,8 @@ public abstract class Pirate : Character
     public PirateProfile pirateProfilePrefab;
     public PirateProfile pirateProfileInstance;
     public Vector3Int gridPosition;
+    public UnityEvent<Vector3Int> placeBuffTiles;
+    public UnityEvent<Vector3Int> removeBuffTiles;
     public int price;
     private Material defaultMaterial;
     private SpriteRenderer spriteRenderer;
@@ -67,6 +70,16 @@ public abstract class Pirate : Character
         base.DealDamageToEnemy(targetedEnemy);
         if (lifestealMultiplier != 0.0f)
             health.Heal(damage * lifestealMultiplier);
+    }
+
+    public void GrantArmorBuff()
+    {
+        
+    }
+
+    public void RemoveArmorBuff()
+    {
+        damageReduction = 0;
     }
 
 }

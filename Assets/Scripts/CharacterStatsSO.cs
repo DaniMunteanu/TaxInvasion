@@ -5,7 +5,8 @@ using UnityEngine;
 public class CharacterStatsSO : ScriptableObject
 {
     public CutlassPirateStats cutlassPirateStats;
-    public KatanaAgentStats katanaAgentStats;
+    public KatanaAgentStats katanaAgent1Stats;
+    public KatanaAgentStats katanaAgent2Stats;
     public float treasureHealth;
     public int startCredits;
 }
@@ -26,7 +27,7 @@ public class CutlassPirateStats
     public float lifestealUpgradeMultiplier;
     public int lifestealUpgradePrice;
     public int spinUpgradePrice;
-    public float captainPassiveHealAmmount;
+    public float captainDamageReduction;
     public int captainUpgradePrice;
 }
 

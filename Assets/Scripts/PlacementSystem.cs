@@ -20,10 +20,13 @@ public class PlacementSystem : MonoBehaviour
     MainUI mainUI;
     [SerializeField]
     EconomySystem economySystem;
+    [SerializeField]
+    GameObject buffTilesParent;
     private Vector3Int cellPos;
     private Vector3Int pirateSelector;
     private Vector3 cellCenterPos;
-    private Dictionary<Vector3Int, Pirate> placedPirates = new Dictionary<Vector3Int,Pirate>();
+    private Dictionary<Vector3Int, Pirate> placedPirates = new Dictionary<Vector3Int, Pirate>();
+    private Dictionary<Vector3Int, BuffTile> buffTiles = new Dictionary<Vector3Int, BuffTile>();
     private Pirate lastSelectedPirate;
     
 
@@ -31,6 +34,54 @@ public class PlacementSystem : MonoBehaviour
     {
         hexIndicator.SetActive(false);
         InitializePlacedPiratesData();
+        InitializeBuffTilesData();
+    }
+
+    private void PlaceBuffTiles(Vector3Int center)
+    {
+        buffTiles[center].layers++;
+        buffTiles[center].gameObject.SetActive(true);
+
+        placedPirates[center].GrantArmorBuff();
+
+        foreach (BuffTile neighbour in buffTiles[center].neighbours)
+        {
+            neighbour.layers++;
+            neighbour.gameObject.SetActive(true);
+
+            if (placedPirates[neighbour.gridCoords] != null)
+                placedPirates[neighbour.gridCoords].GrantArmorBuff();
+        }
+    }
+
+    private void RemoveBuffTiles(Vector3Int center)
+    {
+        buffTiles[center].layers--;
+        if (buffTiles[center].layers == 0)
+        {
+            buffTiles[center].gameObject.SetActive(false);
+            placedPirates[center].RemoveArmorBuff();
+        }
+
+        foreach (BuffTile neighbour in buffTiles[center].neighbours)
+        {
+            neighbour.layers--;
+            if (neighbour.layers == 0)
+            {
+                neighbour.gameObject.SetActive(false);
+                if (placedPirates[neighbour.gridCoords] != null)
+                    placedPirates[neighbour.gridCoords].RemoveArmorBuff();
+            }
+        }
+    }
+
+    private void InitializeBuffTilesData()
+    {
+        foreach (Transform childTransform in buffTilesParent.transform)
+        {
+            BuffTile currentBuffTile = childTransform.GetComponent<BuffTile>();
+            buffTiles.Add(currentBuffTile.gridCoords, currentBuffTile);
+        }
     }
 
     private void InitializePlacedPiratesData()
@@ -91,6 +142,12 @@ public class PlacementSystem : MonoBehaviour
             
             placedPirates[cellPos] = instantiatedPirate;
             instantiatedPirate.gridPosition = cellPos;
+            
+            instantiatedPirate.placeBuffTiles.AddListener(PlaceBuffTiles);
+            instantiatedPirate.removeBuffTiles.AddListener(RemoveBuffTiles);
+
+            if (buffTiles[instantiatedPirate.gridPosition].gameObject.activeSelf == true)
+                instantiatedPirate.GrantArmorBuff();
 
             economySystem.purchaseMade.Invoke(instantiatedPirate.price);
             economySystem.RegisterCharacterDeath(instantiatedPirate);

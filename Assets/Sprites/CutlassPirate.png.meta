@@ -123,7 +123,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 294
+        y: 588
         width: 38
         height: 42
       alignment: 9
@@ -132,9 +132,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3786423785307e6b0800000000000000
+      spriteID: 862ee7664db5c7647b0c9811ea41600a
       internalID: -5267237560762734477
       vertices: []
       indices: 
@@ -145,7 +145,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 294
+        y: 588
         width: 38
         height: 42
       alignment: 9
@@ -154,9 +154,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 05ba02033efe01540800000000000000
+      spriteID: 1801ae406932e984e883791fe2500eb3
       internalID: 4976741347288460112
       vertices: []
       indices: 
@@ -167,7 +167,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
-        y: 294
+        y: 588
         width: 38
         height: 42
       alignment: 9
@@ -176,9 +176,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f5f87fdcff0923b10800000000000000
+      spriteID: 723f023185edb3c4a9b300a27dcc9d5e
       internalID: 1959788216206200671
       vertices: []
       indices: 
@@ -189,7 +189,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 252
+        y: 546
         width: 38
         height: 42
       alignment: 9
@@ -200,7 +200,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8eea64db3767e0141954d96c95e3b6eb
+      spriteID: afb782f14b797a043bbcc68f916c2c1c
       internalID: -446372401
       vertices: []
       indices: 
@@ -211,7 +211,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 252
+        y: 546
         width: 38
         height: 42
       alignment: 9
@@ -222,7 +222,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 329f511fc9b29b045a4604a6b9ac09ae
+      spriteID: ef8ea1aac92b8e54289ca0fb92109424
       internalID: 1030610537
       vertices: []
       indices: 
@@ -233,6 +233,424 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
+        y: 546
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6417b83934e2049ab4fe05888159e6
+      internalID: -640079477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 504
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a75579582bf4fd43b8801410908bbd2
+      internalID: 1495070426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_7
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 504
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b123542e02fdfe45a38688551719380
+      internalID: 25345572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_8
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 504
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b164f00ba660e644fa762c85d6a9975a
+      internalID: -185340579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 462
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bfb8fc6c22626468992363047c6c78
+      internalID: 358159407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_10
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 462
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442f885215f31ee40987b1e15613f438
+      internalID: -1029829525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_11
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 462
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9edb76d846882145b49e4d35107fd90
+      internalID: -1028199399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1be54602d89b34581de7e58458336f
+      internalID: 1055293786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_13
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 420
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489894af5f0d79344ac11c5cc722b87a
+      internalID: 1842250597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_14
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 420
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f920275d181bb6f41ada46f5e1229039
+      internalID: -164094244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 378
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944a283678b7954489b1654038bce920
+      internalID: 1094537464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_16
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 378
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f94b972779e4734aa9eacb52f1e03f0
+      internalID: 1717871733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_17
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 378
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6626d06df92a8c408c1fc2891055d1f
+      internalID: 1675907430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538318d0bfcc4c0498ffdff9179a67f9
+      internalID: 19887934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_19
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 336
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da13144dfb0d1bf46bac8a65ce97e0c1
+      internalID: 1511883501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_20
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 336
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0ab2e316330ff45b840738a3c40aef
+      internalID: 961202504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 294
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6a01edf3bd8c64688d2b9cd2160dc2
+      internalID: 2066371250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_22
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 294
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776df2b68db41d0489d6892623514226
+      internalID: -1847183303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_23
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 294
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e897c6b54920141b9635d1d30ea82b
+      internalID: -338109842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_24
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 252
         width: 38
         height: 42
@@ -244,14 +662,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3753860dab6ee8443a4ed8909ac2015d
-      internalID: -640079477
+      spriteID: e7764aa940ac63845a4cb4cef9d1bce5
+      internalID: 1224514508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_6
+      name: CutlassPirate_25
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 252
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43bdb82e27ff31e428cce1bed057fb09
+      internalID: 733842593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_26
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 252
+        width: 38
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03fa6fc3acfbb9a4bb94accbd6d68a3e
+      internalID: -544312360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutlassPirate_27
       rect:
         serializedVersion: 2
         x: 0
@@ -266,14 +728,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2219e6ca3d6ba3848bae39843d2c03a5
-      internalID: 1495070426
+      spriteID: fc614fd19d4e2cf46a62f00cc76ffa5d
+      internalID: 1321686104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_7
+      name: CutlassPirate_28
       rect:
         serializedVersion: 2
         x: 38
@@ -288,14 +750,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 941a7881c77bc4d4fabc56f46f9ecc63
-      internalID: 25345572
+      spriteID: ea9fb4e5717dd584096329749f9f2ae1
+      internalID: 1221423424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_8
+      name: CutlassPirate_29
       rect:
         serializedVersion: 2
         x: 76
@@ -310,14 +772,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1d9fe567aca0c8499ff828c51d2f564
-      internalID: -185340579
+      spriteID: 4feccb82aab68064f9c9f6e2b525ec11
+      internalID: 1942540558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_9
+      name: CutlassPirate_30
       rect:
         serializedVersion: 2
         x: 0
@@ -332,14 +794,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35c5dbaddc22d8a4f8fd48b4635fbbb6
-      internalID: 358159407
+      spriteID: 12579b40a26625b42a1a5a5c471dcdde
+      internalID: -168530479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_10
+      name: CutlassPirate_31
       rect:
         serializedVersion: 2
         x: 38
@@ -354,14 +816,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80cb4356c784df3459a4a0456bd041fb
-      internalID: -1029829525
+      spriteID: 8fe20bef3a0397247b4e339bada595b3
+      internalID: -475732494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_11
+      name: CutlassPirate_32
       rect:
         serializedVersion: 2
         x: 76
@@ -376,14 +838,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 365f7205ff1236e43812bbbf644f3409
-      internalID: -1028199399
+      spriteID: 8f26866ff3694d84ab725e85ee1fea36
+      internalID: -1892935645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_12
+      name: CutlassPirate_33
       rect:
         serializedVersion: 2
         x: 0
@@ -398,14 +860,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b38531e0787474941ade9441f3c21827
-      internalID: 1055293786
+      spriteID: 14a832a6b00a050409593935764341ce
+      internalID: 15437153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_13
+      name: CutlassPirate_34
       rect:
         serializedVersion: 2
         x: 38
@@ -420,14 +882,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a79c052f285e916418a5fbdb85f9c2e7
-      internalID: 1842250597
+      spriteID: 0370b012c5f556a4ba1bd9ea28548b7c
+      internalID: -431570775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_14
+      name: CutlassPirate_35
       rect:
         serializedVersion: 2
         x: 76
@@ -442,14 +904,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c81559e557f0dd648aa9585350466efc
-      internalID: -164094244
+      spriteID: 0b5d1fa5b6dd5ec4f879c4e6c1c5a72d
+      internalID: -1558123124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_15
+      name: CutlassPirate_36
       rect:
         serializedVersion: 2
         x: 0
@@ -464,14 +926,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd474de01d31ab24ea8a609865a3e913
-      internalID: 1094537464
+      spriteID: 7275474a72828ff4497ae372773d14ef
+      internalID: -1117354065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_16
+      name: CutlassPirate_37
       rect:
         serializedVersion: 2
         x: 38
@@ -486,14 +948,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae3fc62122e425844bfa782d19ebaf12
-      internalID: 1717871733
+      spriteID: 28466fad190f1524c892446f42493528
+      internalID: 685585923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_17
+      name: CutlassPirate_38
       rect:
         serializedVersion: 2
         x: 76
@@ -508,14 +970,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37f986640bfe0bd44b108c035a386a20
-      internalID: 1675907430
+      spriteID: 55867a86f3c724a4b9816db6516685e3
+      internalID: -5125956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_18
+      name: CutlassPirate_39
       rect:
         serializedVersion: 2
         x: 0
@@ -530,14 +992,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64df23ccb7553694b926e033c5ec252e
-      internalID: 19887934
+      spriteID: 342e232bb4e901c46aafd9e08bef86d7
+      internalID: -979108374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_19
+      name: CutlassPirate_40
       rect:
         serializedVersion: 2
         x: 38
@@ -552,14 +1014,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0095780b2c4d51040bc63e58f8785c99
-      internalID: 1511883501
+      spriteID: 4a54bdff7b94b0549acd0f3ddb0e8db6
+      internalID: 1611106155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_20
+      name: CutlassPirate_41
       rect:
         serializedVersion: 2
         x: 76
@@ -574,14 +1036,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b19e2d111c63b72459d9532af35a44a6
-      internalID: 961202504
+      spriteID: 6e371b339a649774c813d8b0b3bb2baf
+      internalID: 6097872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutlassPirate_21
+      name: CutlassPirate_42
       rect:
         serializedVersion: 2
         x: 0
@@ -596,52 +1058,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 780f8f882a7cc52429cc6c5197590106
-      internalID: 2066371250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CutlassPirate_22
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 0
-        width: 38
-        height: 42
-      alignment: 9
-      pivot: {x: 0.5, y: 0.14285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3057563f4dc447e459971b263eaf30d6
-      internalID: -1847183303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CutlassPirate_23
-      rect:
-        serializedVersion: 2
-        x: 76
-        y: 0
-        width: 38
-        height: 42
-      alignment: 9
-      pivot: {x: 0.5, y: 0.14285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e21768e9bfc7a842a26719e8aac1c8a
-      internalID: -338109842
+      spriteID: 7e6ba536a11efbd47a4de6e2eb1bc30c
+      internalID: 2028439484
       vertices: []
       indices: 
       edges: []
@@ -681,8 +1099,27 @@ TextureImporter:
       CutlassPirate_21: 2066371250
       CutlassPirate_22: -1847183303
       CutlassPirate_23: -338109842
+      CutlassPirate_24: 1224514508
+      CutlassPirate_25: 733842593
+      CutlassPirate_26: -544312360
+      CutlassPirate_27: 1321686104
+      CutlassPirate_28: 1221423424
+      CutlassPirate_29: 1942540558
       CutlassPirate_3: -446372401
+      CutlassPirate_30: -168530479
+      CutlassPirate_31: -475732494
+      CutlassPirate_32: -1892935645
+      CutlassPirate_33: 15437153
+      CutlassPirate_34: -431570775
+      CutlassPirate_35: -1558123124
+      CutlassPirate_36: -1117354065
+      CutlassPirate_37: 685585923
+      CutlassPirate_38: -5125956
+      CutlassPirate_39: -979108374
       CutlassPirate_4: 1030610537
+      CutlassPirate_40: 1611106155
+      CutlassPirate_41: 6097872
+      CutlassPirate_42: 2028439484
       CutlassPirate_5: -640079477
       CutlassPirate_6: 1495070426
       CutlassPirate_7: 25345572

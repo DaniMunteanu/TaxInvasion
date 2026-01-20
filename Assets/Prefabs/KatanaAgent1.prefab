@@ -204,10 +204,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   creditsDroppedOnDeath: 0
-  laneIndex: 0
+  lane: {fileID: 0}
+  agentDead:
+    m_PersistentCalls:
+      m_Calls: []
   treasurePile: {fileID: 0}
   moveSpeed: 1
   treasureDamage: 1
+  difficultyLevel: 1
 --- !u!195 &7561427123318010180
 NavMeshAgent:
   m_ObjectHideFlags: 0

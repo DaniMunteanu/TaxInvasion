@@ -2583,8 +2583,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TooltipTrigger
   headerText: CAPTAIN!
-  descriptionText: This unit and their adjacent allies regenerate health during the
-    rounds. The effect does not stack.
+  descriptionText: This unit and their adjacent allies take 50% less damage. The
+    effect does not stack.
   costText: 
 --- !u!114 &2006312741457251277 stripped
 MonoBehaviour:

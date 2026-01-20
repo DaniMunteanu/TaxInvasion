@@ -23,12 +23,17 @@ MonoBehaviour:
     lifestealUpgradeMultiplier: 0.5
     lifestealUpgradePrice: 0
     spinUpgradePrice: 0
-    captainPassiveHealAmmount: 0.1
+    captainDamageReduction: 50
     captainUpgradePrice: 0
-  katanaAgentStats:
-    maxHealth: 15
+  katanaAgent1Stats:
+    maxHealth: 10
     damage: 5
-    treasureDamage: 2
+    treasureDamage: 1
     creditsDroppedOnDeath: 10
+  katanaAgent2Stats:
+    maxHealth: 20
+    damage: 10
+    treasureDamage: 2
+    creditsDroppedOnDeath: 20
   treasureHealth: 10
   startCredits: 100

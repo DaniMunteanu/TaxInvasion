@@ -211,6 +211,7 @@ MonoBehaviour:
   treasurePile: {fileID: 0}
   moveSpeed: 1
   treasureDamage: 1
+  difficultyLevel: 2
 --- !u!195 &2753001768392687872
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class Character : MonoBehaviour
     public Health health;
     [SerializeField]
     protected float damage;
+    protected float damageReduction = 0;
     protected Character currentEnemy;
     public UnityEvent<int> characterDead;
     public int creditsDroppedOnDeath;
@@ -62,7 +63,7 @@ public class Character : MonoBehaviour
 
     public void CharacterTakeDamage(float damage)
     {
-        health.TakeDamage(damage);
+        health.TakeDamage( (1 - damageReduction/100) * damage);
         if (animator != null)
             animator.SetTrigger("isHurt");
     }

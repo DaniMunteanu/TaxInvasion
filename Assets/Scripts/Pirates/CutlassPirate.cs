@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class CutlassPirate : Pirate
 {
+    private bool isCaptain = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected new void Start()
     {
         base.Start();
-        
+        health.healthDepleted.AddListener(OnHealthDepleted);
     }
 
     protected new void Awake()
@@ -45,5 +46,22 @@ public class CutlassPirate : Pirate
     protected override void OnUpgrade2Bought()
     {
         animator.SetBool("usesAttack2", true);
+        isCaptain = true;
+        placeBuffTiles.Invoke(gridPosition);
+    }
+
+    public new void GrantArmorBuff()
+    {
+        base.GrantArmorBuff();
+        damageReduction = characterStats.cutlassPirateStats.captainDamageReduction;
+    }
+
+    public new void OnHealthDepleted()
+    {
+        if (isCaptain)
+            removeBuffTiles.Invoke(gridPosition);
+        
+        characterDead.Invoke(creditsDroppedOnDeath);
+        Destroy(this.gameObject);
     }
 }
