@@ -42,13 +42,21 @@ public class CutlassPirate : Pirate
     protected override void OnUpgrade1Bought()
     {
         animator.SetBool("usesAttack1", true);
+        SoundManager.PlaySound(SoundType.SPECIAL_UPGRADE);
     }
     protected override void OnUpgrade2Bought()
     {
         animator.SetBool("usesAttack2", true);
         isCaptain = true;
         placeBuffTiles.Invoke(gridPosition);
+        SoundManager.PlaySound(SoundType.SPECIAL_UPGRADE);
     }
+
+    public new void DealDamageToEnemy(Character targetedEnemy)
+    {
+        base.DealDamageToEnemy(targetedEnemy);
+        SoundManager.PlaySound(SoundType.CUTLASS_CLASH);
+    } 
 
     public new void GrantArmorBuff()
     {
@@ -62,6 +70,7 @@ public class CutlassPirate : Pirate
             removeBuffTiles.Invoke(gridPosition);
         
         characterDead.Invoke(creditsDroppedOnDeath);
+        SoundManager.PlaySound(SoundType.CHARACTER_DEAD);
         Destroy(this.gameObject);
     }
 }

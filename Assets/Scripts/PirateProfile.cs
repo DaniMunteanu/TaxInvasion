@@ -37,6 +37,7 @@ public class PirateProfile : MonoBehaviour
     void OnSellButtonPressed()
     {
         healthBar.health.healthDepleted.Invoke();
+        SoundManager.PlaySound(SoundType.TRANSACTION);
     }
 
     void UpdateTooltipTrigger()

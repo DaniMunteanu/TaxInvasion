@@ -118,6 +118,7 @@ public class Agent : Character
     {
         treasurePile.treasureHealth.TakeDamage(treasureDamage);
         agentDead.Invoke(lane);
+        SoundManager.PlaySound(SoundType.AGENT_TELEPORT);
         Destroy(this.gameObject);
     }
 
@@ -125,6 +126,7 @@ public class Agent : Character
     {
         characterDead.Invoke(creditsDroppedOnDeath);
         agentDead.Invoke(lane);
+        SoundManager.PlaySound(SoundType.CHARACTER_DEAD);
         Destroy(this.gameObject);
     }
 }

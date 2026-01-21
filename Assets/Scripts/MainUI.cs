@@ -77,6 +77,8 @@ public class MainUI : MonoBehaviour
             Time.timeScale = 0f;
 
             paused = !paused;
+
+            SoundManager.PlaySound(SoundType.VICTORY);
         }
     }
 
@@ -94,6 +96,8 @@ public class MainUI : MonoBehaviour
         Time.timeScale = 0f;
 
         paused = !paused;
+
+        SoundManager.PlaySound(SoundType.GAME_OVER);
     }
 
     void UpdateTotalCreditsText()

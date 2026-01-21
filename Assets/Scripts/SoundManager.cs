@@ -2,15 +2,15 @@ using UnityEngine;
 
 public enum SoundType
 {
-    CUTLASS_SLASH,
+    CUTLASS_CLASH,
     CUTLASS_SPIN,
-    KATANA_SLASH,
-    CHARACTER_HIT,
+    KATANA_CLASH,
     CHARACTER_DEAD,
     AGENT_TELEPORT,
-    TREASURE_DAMAGE,
     TRANSACTION,
-    SPECIAL_UPGRADE
+    SPECIAL_UPGRADE,
+    VICTORY,
+    GAME_OVER
 }
 
 [RequireComponent(typeof(AudioSource))]

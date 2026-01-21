@@ -28,6 +28,12 @@ public class KatanaAgent : Agent
         }
     }
 
+    public new void DealDamageToEnemy(Character targetedEnemy)
+    {
+        base.DealDamageToEnemy(targetedEnemy);
+        SoundManager.PlaySound(SoundType.KATANA_CLASH);
+    } 
+
     // Update is called once per frame
     new void Update()
     {

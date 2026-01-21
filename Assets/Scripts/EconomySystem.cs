@@ -41,6 +41,7 @@ public class EconomySystem : MonoBehaviour
     {
         currentCredits = Mathf.Clamp(currentCredits - creditsSpent, 0, 999);
         creditsModified.Invoke();
+        SoundManager.PlaySound(SoundType.TRANSACTION);
     }
     
 }

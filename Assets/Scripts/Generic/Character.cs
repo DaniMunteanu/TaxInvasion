@@ -78,6 +78,7 @@ public class Character : MonoBehaviour
     public void OnHealthDepleted()
     {
         characterDead.Invoke(creditsDroppedOnDeath);
+        SoundManager.PlaySound(SoundType.CHARACTER_DEAD);
         Destroy(this.gameObject);
     }
 

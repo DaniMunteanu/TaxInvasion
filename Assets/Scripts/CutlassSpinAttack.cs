@@ -22,8 +22,7 @@ public class CutlassSpinAttack : MonoBehaviour
         {
             Character targetedEnemy = collision.gameObject.transform.parent.gameObject.GetComponent<Character>();
             cutlassPirateParent.DealDamageToEnemy(targetedEnemy);
-            //characterParent.StartAttackingEnemy(targetedEnemy);
-            
+            SoundManager.PlaySound(SoundType.CUTLASS_SPIN);
         }
     }
 
