@@ -90,7 +90,7 @@ public class Agent : Character
             agent.SetDestination(currentTarget.position);
             agent.isStopped = false;
             SetOrientationForCurrentTarget();
-            agent.stoppingDistance = 1;
+            agent.stoppingDistance = 0.75f;
         }
         else
         {

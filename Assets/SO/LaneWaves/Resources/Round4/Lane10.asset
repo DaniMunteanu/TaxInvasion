@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Lane10
   m_EditorClassIdentifier: Assembly-CSharp::LaneWave
   laneIndex: 10
-  maxSpawnedAgents: 2
+  maxSpawnedAgents: 1
   agentsList:
   - {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
+  - {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}
   - {fileID: 2281919038974887673, guid: 5f6d5dec97006e243b6a0cbbd311295d, type: 3}
+  - {fileID: 8678820134277799003, guid: 3061bba3a67b7044ca199f91f6e8ddb0, type: 3}

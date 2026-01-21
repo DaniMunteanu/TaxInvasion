@@ -2776,6 +2776,38 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2129808753495736964, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537827261283999329, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_Size.x
+      value: 9.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537827261283999329, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_Size.y
+      value: 5.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537827261283999329, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e0e80b1a7539b35449155e1d06ccc2ca, type: 3}
+    - target: {fileID: 2537827261283999329, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_SortingLayer
+      value: 32709
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537827261283999329, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3235492612279130665, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3235492612279130665, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3783896642605792643, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2883,6 +2915,14 @@ PrefabInstance:
     - target: {fileID: 4016357673156236027, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669324589538225644, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e0e80b1a7539b35449155e1d06ccc2ca, type: 3}
+    - target: {fileID: 6669324589538225644, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7010362499361754553, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
       propertyPath: m_OverrideSorting
@@ -3179,6 +3219,14 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3235492612279130665, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3235492612279130665, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3783896642605792643, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3258,6 +3306,14 @@ PrefabInstance:
     - target: {fileID: 3783896642605792643, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669324589538225644, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c06ee9b2d90ef204082599e874861d1c, type: 3}
+    - target: {fileID: 6669324589538225644, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7044677666295206457, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
       propertyPath: m_Name
@@ -3308,6 +3364,14 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3235492612279130665, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3235492612279130665, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3783896642605792643, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3387,6 +3451,14 @@ PrefabInstance:
     - target: {fileID: 3783896642605792643, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669324589538225644, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7f24defbf97a80648a974ae1f6d6715c, type: 3}
+    - target: {fileID: 6669324589538225644, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7044677666295206457, guid: b4181b6d4590dc34e87ab412dbac7b83, type: 3}
       propertyPath: m_Name

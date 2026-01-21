@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Round
   lanes:
   - {fileID: 11400000, guid: 4e78383534ff35b479bf4d88074e9394, type: 2}
+  - {fileID: 11400000, guid: f512fadde2689414f8a7e2e1a9888a2a, type: 2}
+  - {fileID: 11400000, guid: a93de5cf02f2521489c59d0cd8909468, type: 2}
+  - {fileID: 11400000, guid: 13bb07274f50dd34c833ad47e24c256d, type: 2}
+  - {fileID: 11400000, guid: 560b93f85044bda42af31a57a114c696, type: 2}
+  - {fileID: 11400000, guid: cc68d7586bec64347962664a22b81c0e, type: 2}
+  - {fileID: 11400000, guid: ab327864ddfa5fb498662830ea0e6872, type: 2}
