@@ -43,6 +43,7 @@ public class PirateProfile : MonoBehaviour
     void UpdateTooltipTrigger()
     {
         tooltipTrigger.descriptionText = healthBar.health.currentHitpoints + "/" + healthBar.health.maxHitpoints;
-        TooltipSystem.UpdateText(null, tooltipTrigger.descriptionText, null);
+        if (tooltipTrigger.isShown)
+            TooltipSystem.UpdateText(null, tooltipTrigger.descriptionText, null);
     }
 }

@@ -24,6 +24,9 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damageHitpoints)
     {
+        if (currentHitpoints == 0.0)
+            return;
+
         currentHitpoints = Mathf.Clamp(currentHitpoints - damageHitpoints, 0, maxHitpoints);
         healthChanged.Invoke();
 
