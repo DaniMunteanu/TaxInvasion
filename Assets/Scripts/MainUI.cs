@@ -214,7 +214,7 @@ public class MainUI : MonoBehaviour
         pirateProfiles[pirateGridPosition].destroyProfilePage.AddListener(RemovePirateProfile);
         pirateProfiles[pirateGridPosition].upgradePage.economySystem = economySystem;
         pirateProfiles[pirateGridPosition].upgradePage.characterStats = characterStats;
-        pirateProfiles[pirateGridPosition].transform.SetParent(gameObject.transform, true);
+        pirateProfiles[pirateGridPosition].GetComponent<RectTransform>().SetParent(gameObject.GetComponent<RectTransform>(), true);
         pirate.pirateProfileInstance = pirateProfiles[pirateGridPosition];
 
         ShowPirateProfile(pirateGridPosition);

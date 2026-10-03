@@ -7312,7 +7312,7 @@ Camera:
     x: 0
     y: 0
     width: 1
-    height: 1
+    height: 0.99967617
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -7364,9 +7364,9 @@ MonoBehaviour:
   m_AssetsPPU: 32
   m_RefResolutionX: 640
   m_RefResolutionY: 360
-  m_CropFrame: 0
+  m_CropFrame: 4
   m_GridSnapping: 1
-  m_FilterMode: 0
+  m_FilterMode: 1
   m_UpscaleRT: 0
   m_PixelSnapping: 0
   m_CropFrameX: 0
@@ -10568,7 +10568,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -4.21875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1881636880}
   - {fileID: 1013147510}
@@ -19204,6 +19204,10 @@ PrefabInstance:
       propertyPath: placementSystem
       value: 
       objectReference: {fileID: 2101864218}
+    - target: {fileID: 5643911456187871537, guid: 08a7628e82fe8704a8af4d3d94c39ceb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 20.864563
+      objectReference: {fileID: 0}
     - target: {fileID: 5645814913203790904, guid: 08a7628e82fe8704a8af4d3d94c39ceb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
